@@ -1,0 +1,1 @@
+$(function(){$(window).scroll(function(){$(window).scrollTop()>1?$(".header").addClass("fixed-top-bg"):$(".header").removeClass("fixed-top-bg")})});

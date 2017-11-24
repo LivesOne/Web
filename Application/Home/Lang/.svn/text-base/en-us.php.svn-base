@@ -1,0 +1,179 @@
+<?php
+return array(
+    //index-index
+    'index_index_title' => 'LivesToken(LVT)',
+    'index_nav_1' => 'Home',
+    'index_nav_2' => 'Team',
+    'index_nav_3' => 'Whitepaper',
+    'index_nav_4' => 'Private Placement Entrance',
+    'index_nav_5' => 'English',
+    'index_header_1' => 'Symbiosism Chain is aiming to achieve mutual improvement and common growth for users and businesses.',
+    'index_header_2' => 'The Symbiosism Chain is a new blockchain project that created by Jeff Chen, founder of Maxthon Browser, and its team. Its goal is to create a new business model based on the blockchain technology - Symbiosism Economy Model.',
+    'index_header_3' => 'Enter Private Placement',
+    'index_header_4' => 'Join LVT\'s Official Telegram Group for Private Placement  Info',
+    'index_content_1' => 'What is Symbiosism Chain?',
+    'index_content_2' => 'Symbiosism Chain is the new economic system that built in virtual network. In this system, consumers and businesses formed a ecological circle of Symbiosism System that based on both sides\' mutual interests.',
+    'index_content_3' => 'Online Behavior is Value.',
+    'index_content_4' => 'Connect All Businesses and Users.',
+    'index_content_5' => 'Enhance User Stickiness and Loyalty.',
+    'index_content_6' => 'Reduce User Acquisition Cost.',
+    'index_content_7' => 'Symbiosism Chain & Maxthon Browser',
+    'index_content_8' => 'As the founding team\'s original product, Maxthon Browser will be the first product to access to the Symbiosism Chain. Maxthon Browser\'s hundreds of millions of users worldwide will become the first batch of Symbiosism Chain\'s seed users,  and the early holders of LivesToken(LVT).',
+    'index_content_9' => 'What is LivesToken(LVT)?',
+    'index_content_10' => 'LivesToken(LVT) is the digital tokens issued by the Symbiosism Chain, which is the medium that solves the user value realization problem. LivesToken(LVT) is distributed through Internet applications to compensate the quantified value that users generated from their behaviors and consumed time on the Internet. ',
+    'index_content_11' => 'Easy to obtain',
+    'index_content_12' => 'Users can obtain LVT through online surfing.',
+    'index_content_13' => 'Safe',
+    'index_content_14' => 'Distributed Storage Behavior Record',
+    'index_content_15' => 'Transparent & equitable',
+    'index_content_16' => ' Cryptocurrency that based on Ethereum blockchain',
+    'index_content_17' => 'Large appreciation space',
+    'index_content_18' => 'Token circulation will cause scarcity and hence produce premium.',
+    'index_content_19' => 'Circulation',
+    'index_content_20' => 'Convert legal currency freely worldwide',
+    'index_content_21' => 'Fast growth',
+    'index_content_22' => 'Operated by well known Internet develop team, safe and sound.',
+    'index_content_23' => 'Click the Invitation Link to Join Our Official Telegram Group: LivesToken - LVT',
+    'index_content_24' => 'A new proof-of-value cryptocurrency LivesToken(LVT) has emerged in the new Internet era, are you ready? Join our official Telegram group to receive the latest update of LVT and join our private placement. ',
+
+    //首页
+    'index_title'=>'LivesToken Private Placement',
+    'index_text_1'=>'LivesToken Private Placement',
+    'index_text_2'=>'LivesToken(LVT) issued a total of 1 billion token, and the total Private Placement number will be 100 million LivesToken(LVT), accounting for 10% of LivesToken (LVT) total circulation. This Private Placement is open only to specific investors. The minimum threshold of the private placement is 20 ETH, and no more than 500 ETH. The holding LivesToken will have a lockout period of six months, each month one-sixth of the holding token will be unlocked.',
+    'index_text_3'=>'Reminder: Due to US local law\'s restrictions on the Private Placement regulatory, we temporarily do NOT support the US citizens to pre-order.',
+    'index_text_4'=>'Symbiosism Foundation',
+    'index_text_5'=>'Go pre-order',
+    //登陆页
+    'login_title'=>'Sign in',
+    'login_text'=>'required:Required',
+    'login_mobile_error'=>'required:Required,mobile:Invalid mobile phone number',
+    'login_mobile_phone'=>'Mobile phone number',
+    'login_vcode'=>'Verification code',
+    'login_get_vcode'=>'Get the verification code',
+    'login_country'=>'Select a country / region',
+    'login_mobile'=>'Mobile phone number can\'t be empty',
+    'login_vcode_send_later'=>'seconds later',
+    'login_vcode_resend'=>'Retrieve again',
+    // 协议
+    'protocol_title'=>'User agreement',
+    'protocol_fund'=>'Symbiosism Foundation User Agreement',
+    // 个人资料
+    'info_title'=>'Personal information',
+    'info_name'=>'Real name',
+    'info_no_china'=>'required:Required,nochinese:Can\'t contain Chinese',
+    'info_address'=>'Ether Wallet Address (can not be changed after binding)',
+    'info_email_error'=>'required:Required,email:Invalid email address',
+    'info_email'=>'Email address',
+    // 购买页
+    'eth_title'=>'Confirm pre-order',
+    'eth_num'=>'Enter the amount of Ether you want to exchange',
+    'eth_text_num'=>'required:Required,plusinteger:Please enter an integer,compare#>19:Number between 20-500,compare#<501:Number between 20-500',
+    'eth_text_off'=>' off',
+    'eth_text_buy_5'=>' Buy (20, 50] ETH, 5% off',
+    'eth_text_buy_15'=>' Buy (50, 100] ETH, 15% off',
+    'eth_text_buy_25'=>' Buy (100, 500] ETH, 25% off',
+    'eth_text_tip'=>'Private Placement discounts are as follow:',
+    'eth_rate'=>'Fixed exchange rate',
+    // 认购完成
+    'end_title'=>'Pre-order is completed',
+    'end_ok_turn'=>'Pre-order is completed, please transfer the Ethereum as soon as possible',
+    'end_post_email'=>'Electronic subscription agreement have been sent to your email address.',
+
+    'email_title'=>'LivesToken(LVT) Private Placement Notification',
+
+        //subscription相关信息
+    //index
+    'subscription_header_ex' => 'Private Placement Finish Countdown',
+    'subscription_index_explain' => 'Private Placement Introduction',
+    'subscription_index_desc' => '<p>LivesToken(LVT) will be issued a total of 1 billion tokens, and the total Private Placement issue number will be 100 million LivesToken(LVT), accounting for 10% of LivesToken (LVT) total circulation. </p>
+                                   <p>The Private Placement is only open to specific investors at a price of 1ETH ≧ 9333 LVT.</p>
+                                   <p>Purchase Regulations:</p>
+                                   <p>The minimum threshold of the Private Placement is 20ETH.<br/> 
+                                      The purchase price between 20-50ETH will be 5 percent off.<br/>
+                                      The purchase price between 50-100ETH will be 15 percent off.<br/>
+                                      The purchase price between 100-500ETH will be 25 percent off.</p>',
+    //info
+    'subscription_info_info' => 'Supplementary Information',
+    'subscription_info_noup' => 'Can not be changed',
+    'subscription_info_bx_email' => 'required:Required,email:Invalid email address',
+    'subscription_info_address' => 'Ether Wallet Address',
+    'subscription_info_no_zw' => 'required:Required,isAddress:Ethereum Wallet Address‘ format is wrong',
+    'subscription_info_no_zwrq' => 'isAddress:Ethereum Wallet Address’ format is wrong',
+    'subscription_info_address_many' => 'Ehtereum Wallat Address(can add multiple addresses)',
+    'subscription_info_add_address' => 'Add Ethereum Wallet Address',
+    'subscription_info_address_num' => 'Add Up to Three',
+    //order
+    'subscription_order_money' => 'Subscription Amount',
+    'subscription_order_money_limit' => 'required:Required,plusinteger:Please enter an integer,compare#>19:Number between 20-500,compare#<501:Number between 20-500',
+    'subscription_order_remarks' => 'Reminder:20-50ETH&nbsp;&nbsp;&nbsp;5 Percent Off&nbsp;&nbsp;/&nbsp;&nbsp;50-100ETH&nbsp;&nbsp;&nbsp;15 Percent Off&nbsp;&nbsp;/&nbsp;&nbsp;100ETH以上&nbsp;&nbsp;&nbsp;25 Percent Off',
+    //prompt
+    'subscription_prompt_order' => 'You Have Successfully Subscribed',
+    'subscription_prompt_actual' => 'Actual Transfer Amount',
+    'subscription_prompt_fast' => 'Please Transfer to the Account ASAP：',
+    'subscription_prompt_case_see' => 'Please click the button to inquire your transfer record.',
+    //record
+    'subscription_record_my_record' => 'My Transfer Records',
+    'subscription_record_refresh' => 'Refresh the Transfer Records',
+    'subscription_record_accounts' => 'Transfer Ethereum Wallet Address',
+    'subscription_record_num' => 'Transfer Amount',
+    'subscription_record_get_num' => 'The amount of LVT obtained',
+    'subscription_record_time' => 'Transfer Time',
+    'subscription_record_my_order' => 'Purchased',
+    'subscription_record_addresserror' => 'Ethereum Wallet Address\' format is wrong',
+    //success
+    'subscription_success_order' => 'You Have Successfully Subscribed',
+    'subscription_success_accounts' => 'Please transfer the corresponding amount of ETH to Lives.One\'s Ethereum Wallet address. ',
+
+    'subscription_text_add' => 'Enter the Private Placement',
+    'subscription_text_record' => 'Transfer Records',
+    
+    //公共
+    'text_xieyi'=>'LivesToken Subscription Agreement',
+    'text_submit' => 'Submit',
+    'text_save' => 'Save',
+    'text_back' => 'Return',
+    'text_next'=>'Next step',
+    'text_copy'=>'Duplicate',
+    'text_login'=>'Log in',
+    'text_add_address'=>'Add Ethereum Wallet Address   ',
+    'text_must'=>'required:Required',
+    'text_record_rq' => 'Required',
+    'text_jijin' => 'Symbiosism Foundation',
+    'text_info_mobile' => 'Mobile phone number',
+    'text_info_name' => 'Real name',
+    'text_info_email' => 'Email address',
+    'text_copy_suc' => 'Copied Successfully',
+
+    //error
+    'subscription_error_address' => 'Sorry, the address is entered incorrectly',
+    'subscription_error_address1' => 'Sorry, the address already exists, please re-enter',
+    'subscription_error_address2' => 'Sorry, the address is added incorrectly',
+    'subscription_error_info' => 'Sorry, adding information failed', 
+    'subscription_error_address_num' => 'Sorry, the maximum number of addresses has been reached',
+    'subscription_error_money' => 'Please enter the amount to be purchased',
+    'subscription_error_money1' => 'Sorry, the purchase amount is incorrect',
+    'subscription_error_999' => 'Unknown error',
+    'subscription_msg_ok' => 'The information was added successfully',
+
+    //subscription end
+
+    // 错误信息
+    'error_login'=>'Login failed',
+    'error_vcode_102'=>'Verification code is incorrect',
+    'error_vcode_103'=>'Verification code expired',
+    'error_vcode_999'=>'Unknown error',
+    'error_eth_address'=>'Please enter your unique Ethereum wallet address',
+    'error_register'=>'Registration error, please re-register',
+    'error_register_fail'=>'Registration failed',
+    'error_payment'=>'Pre-order is incorrect, please re-pay',
+    'error_total'=>'Enter the total amount of your pre-order',
+    'error_email'=>'Invalid email address',
+    'error_china_text'=>'Can‘t contain Chinese and can\'t be blank',
+    'error_mobile_text'=>'Invalid mobile phone number',
+    'error_mobile_102'=>'The country code is not supported',
+    'error_mobile_103'=>'Send too often',
+    'error_mobile_104'=>'SMS interface has returned an error number',
+    'error_mobile_999'=>'Other unknown error',
+    'msg_ok'=>'Sent successfully',
+
+);

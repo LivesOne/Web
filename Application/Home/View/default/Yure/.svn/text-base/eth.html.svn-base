@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.eth_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="container">
+        <div class="line gs-content rgbuy">
+        	<form method="post" action="__SELF__">
+	            <div class="line-top text-center">
+	                <p class="line-top-p">{$Think.lang.eth_num}</p>
+	                <div class="form-group">
+	                    <div class="field">
+	                        <input type="text" class="input input-auto input-amount" placeholder="20" data-validate="{$Think.lang.eth_text_num}" value="20" name="num">ETH
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="line-img">
+	                <img src="__STATIC__/assets/images/conversion.png" class="img-responsive conversion" alt="">
+	            </div>
+	            <div class="line-bottom text-center">
+	                <span class="account">147360</span>LVT
+	            </div>
+
+	            <p class="line-tip">{$Think.lang.eth_rate}：1 ETH = 7000 LVT</p>
+                <p class="line-tip line-rule">{$Think.lang.eth_text_tip}</p>
+                <p class="line-tip line-rule">{$Think.lang.eth_text_buy_5}<br/>
+                    {$Think.lang.eth_text_buy_15}<br/>
+                    {$Think.lang.eth_text_buy_25}</p>
+	            <input type="hidden" name="before_ratio" value="7000">
+	            <div class="protocol text-center">
+	                <i class="sel-icon"></i><a href="protocol.html">{$Think.lang.text_xieyi}</a>
+	            </div>
+	            <div class="text-center gs-error">{$error}</div>
+	            <button type="submit" disabled="disabled" class="button bg-main radius-none button-block text-center btn btn-sure">{$Think.lang.eth_title}</button>
+            </form>
+        </div>
+    </div>
+<include file="Yure/footer"/>

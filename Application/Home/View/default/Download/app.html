@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LivesOne</title>
+</head>
+<body>
+    <style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+    </style>
+    <script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+        var ua = navigator.userAgent.toLowerCase();
+    
+        if (ua.match(/iphone/i) == "iphone") {
+            var weixinTip = $('<div id="weixinTip"><p><img src="__STATIC__/bootstrap/img/{$img_ios}"/></p></div>');
+
+        } else {
+            var weixinTip = $('<div id="weixinTip"><p><img src="__STATIC__/bootstrap/img/{$img_and}"/></p></div>');
+        } 
+        
+        $("body").append(weixinTip);
+        $("#weixinTip").css({
+            "position":"fixed",
+            "left":"0",
+            "top":"0",
+            "height":winHeight,
+            "width":"100%",
+            "z-index":"1000",
+            "background-color":"rgba(255,255,255)",
+            // "filter":"alpha(opacity=80)",
+        });
+        $("#weixinTip p").css({
+            "text-align":"center",
+            "margin-top":"10%",
+            "padding-left":"5%",
+            "padding-right":"5%"
+        });
+    </script>
+</body>
+</html>

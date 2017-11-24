@@ -1,0 +1,18 @@
+<!-- 获取左侧导航 -->
+<volist name="categoryArr" id="each_list">
+	<eq name="current" value="$each_list['id']">
+		<li class="active">
+			<a href="{:U('Article/lists?category='.$each_list['name'])}">
+				<i class="icon-chevron-right"></i>{$each_list.title}
+			</a>
+		</li>
+	<else/>
+		<li>
+			<a href="{:U('Article/lists?category='.$each_list['name'])}">
+				<i class="icon-chevron-right"></i>{$each_list.title}
+			</a>
+		</li>
+	</eq>
+</volist>
+
+<!-- end -->

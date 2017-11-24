@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.end_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="container">
+        <div class="line text-center rgbuysuc">
+            <div class="buysuc-tip"><img src="__STATIC__/assets/images/suc.png" class="suc" alt="">{$Think.lang.end_ok_turn}</div>
+            <img src="__STATIC__/assets/images/finish.png" alt="" class="img-responsive finish">
+            <p class="finish-tip">{$Think.lang.end_post_email}</p>
+            <div class="finish-email">{$email}</div>
+        </div>
+    </div>
+<include file="Yure/footer"/>

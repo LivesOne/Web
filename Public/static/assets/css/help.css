@@ -1,0 +1,136 @@
+.layout_left1 {
+    
+    
+}
+.layout_left1 h2 {
+    margin: 44px 0px 44px 20px;
+    border-left: 6px solid #7a7a8a;
+    font-size: 26px;
+    color: #7a768a;
+    text-indent: 15px;
+}
+.layout_left1 li {
+    min-height: 60px;
+    line-height: 60px;
+}
+.layout_left1 li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #000;
+    text-indent: 20px;
+}
+.layout_left1 li a:hover {
+    background-color: #f1f0f6;
+    border-right: 4px solid #ffae29;
+}
+.layout_left1 li a.active {
+    background-color: #f1f0f6;
+    border-right: 4px solid #ffae29;
+}
+.layout_right1 {
+    padding: 40px;
+    border-left: 1px solid #ebebeb;
+}
+.ul_menu {
+    display: none;
+}
+.ul_menu li {
+    min-height: 30px;
+    line-height: 30px;
+}
+.ul_menu li a {
+    display: block !important;
+    width: auto !important;
+    margin: 12px 0px 12px 20px;
+}
+.ul_menu li a.subactive {
+    color: #333;
+}
+.ul_menu li a:hover {
+    border: 0 none;
+}
+.ul_menu li a.subactive {
+    background-color: #f1f0f6;
+}
+.downward, .upward {
+    margin-right: 6px;
+    border-width: 7px;
+}
+.search {
+    margin-left: 30px;
+}
+.search .input-group .input {
+    height: 40px;
+    line-height: 40px;
+}
+.search .button {
+    height: 40px;
+}
+.search .form-group {
+    margin-bottom: 20px;
+}
+.ucenter-help .layout_right {
+    padding-left: 0px;
+}
+.help_con {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+.help_div {
+    margin-top: 12px;
+}
+.help_con .help_p {
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.help_title {
+    font-size: 18px;
+    color: #000;
+}
+.nosearch {
+    margin-top: 100px;
+}
+.nosearch_p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+.red {
+    color: #f13232;
+}
+.search_result {
+    margin-bottom: 24px;
+}
+.help_div img {
+    max-width: 100%;
+    /*width: 100%;*/
+}
+@media (max-width: 760px) {
+    .layout_left1 {
+       height: auto;
+       min-height: auto;
+    }
+    .layout_right1 {
+        padding: 48px 20px 20px; 
+        background: #fff; 
+    }
+    .layout_left1 h2 {
+        margin-bottom: 20px;
+    }
+    .layout_right1 .line {
+        height: auto;
+    }
+    .layout_right1 .line.detail {
+        height: 100%;
+    }
+    .layout_right1 .input-group .addbtn.btn-code {
+        display: block;
+        width: 65%;
+        line-height: 38px;
+        height: 38px;
+    }
+}

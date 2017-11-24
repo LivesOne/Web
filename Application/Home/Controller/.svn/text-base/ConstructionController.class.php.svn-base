@@ -1,0 +1,35 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace Home\Controller;
+use OT\DataDictionary;
+use User\Api\UserApi;
+
+/**
+ * 前台首页控制器
+ * 主要获取首页聚合数据
+ */
+class ConstructionController extends HomeController {
+
+	public function _initialize(){
+        $uid = is_login();
+        //获取个人信息
+        $this->User = new UserApi;
+        $this->infos = $this->User->info($uid);
+        $this->assign('username', $this->infos[1]);
+    }
+    
+	//系统首页
+    public function index(){
+
+        $this->assign('lang', $_COOKIE['lives_lvt_language']);
+        $this->display();
+
+    }
+}

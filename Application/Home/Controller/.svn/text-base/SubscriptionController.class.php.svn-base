@@ -1,0 +1,346 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+
+namespace Home\Controller;
+use User\Api\UserApi;
+use User\Api\OrderApi;
+
+/**
+ * 前台首页控制器
+ * 主要获取首页聚合数据
+ */
+class SubscriptionController extends HomeController {
+
+	public function _initialize(){
+		//判断是否登陆
+        $uid = is_login();
+        $this->uid = $uid;
+
+        if ($uid <= 0 && ACTION_NAME != 'index') {
+			$this->redirect('user/login');
+        }
+
+		//获取以太币交易详细信息
+		$this->Order = new OrderApi;
+
+        //获取个人信息
+		$this->User = new UserApi;
+		$this->infos = $this->User->info($uid);
+
+		$this->assign('username', $this->infos[1]);
+		$this->assign('email', $this->infos[2]);
+		$this->assign('mobile', $this->infos[3]);
+		$this->assign('real_name', $this->infos[4]);
+
+		//获取以太地址
+		$this->Ethpurse = D('ethpurse');
+    	//获取address地址
+    	$this->address_list = $this->Ethpurse->get_uid_address($this->uid);
+		$this->assign('address_list', $this->address_list);
+		// address总量
+    	$this->count_address = count($this->address_list);
+		$this->assign('count_address', $this->count_address);
+
+		$this->lang = $_COOKIE['lives_lvt_language'];
+
+		//跳转到补充资料
+		if (ACTION_NAME != 'index' && ACTION_NAME != 'info') {
+			//检测用户信息 
+	    	//判断个人信息 如不完整，跳转到info页面
+	    	if (empty($this->infos['2']) || empty($this->infos['3']) || empty($this->address_list)) {
+				$this->redirect('subscription/info');
+			}
+		}
+
+		if (ACTION_NAME == 'prompt' || ACTION_NAME == 'participate') {
+			foreach ($this->address_list as $_k => $_val) {
+	    		$address_record[] = $_val['address'];	 
+    		}
+    		
+    		$this->DetailIifo = $this->Order->GetAddressMoney($this->uid, $address_record);
+    		if ($this->DetailIifo !== false) {
+    			$this->Num = $this->DetailIifo['balance'];
+    		}
+		}
+    }
+
+
+	//系统首页
+    public function index(){
+    
+	    $this->assign('lang', $this->lang);
+        $this->display();
+
+    }
+
+    public function participate() {
+
+        //获取M值
+        $Purchase = D('Purchase');
+        $uid_info = $Purchase->get_uid_num($this->uid);
+
+        //算uid的总量
+        foreach ($uid_info as $_val) {
+        	$M += $_val['num'];
+        }
+
+        //判断M和N值的大小
+        if ($M <= $this->Num) {
+        	//填写个人信息地址
+        	$this->redirect('subscription/order');
+
+        } else {
+        	//转账提示
+        	$this->redirect('subscription/prompt');
+        	exit();
+        }
+    }
+    //补充个人资料
+    public function info($user_name = '', $user_email = '', $user_address = array()) {
+    	if(IS_POST){
+    		$error = '';
+    		// email判断
+			if (emailcheck($user_email) === false) {
+				$this->assign('error_email', L('error_email'));
+				$error = 1;
+			} else {
+				//验证以太地址的格式
+				foreach ($user_address as $_val_address) {
+					$address = eth_address($_val_address);
+					if ($address === false) {
+						$this->assign('error_address', L('subscription_error_address'));
+						$error = 1;
+						break;
+					}
+					//查询以太地址是否存在
+					$address_info = $this->Ethpurse->get_address($_val_address);
+					if (!empty($address_info)) {
+						$this->assign('error_address', L('subscription_error_address1'));
+						$error = 1;
+						break;
+					}
+				}
+			}
+			if ($error != 1) {
+				//增加个人信息
+				$info_id = $this->User->updateyitai($this->uid, $user_name, $user_email);
+				if ($info_id <= 0) {
+					$this->assign('error_info', L('subscription_error_info'));
+					$error = 1;
+				}
+				// 增加用户的以太地址
+				foreach ($user_address as $_add_val) {
+					if (!empty($_add_val)) {
+						if ($this->count_address >= 3) {
+							$this->assign('error_address', L('subscription_error_address_num'));
+							$error = 1;
+							break;
+						}
+
+						//增加以太地址
+						$address_id = $this->Ethpurse->add_address($this->uid, $_add_val);
+						if ($address_id <= 0) {
+							$this->assign('error_address', L('subscription_error_address2'));
+							$error = 1;
+							break;
+						}
+						$this->count_address++;
+					}
+				}
+				//跳转到个人信息完成
+				$this->redirect('subscription/participate');
+			}
+			unset($error);
+    	}
+    	$this->display();
+    }
+    //认购
+    public function order($user_money = '', $user_address = array()){
+    	
+		if(IS_POST){
+			$error = '';
+			//验证以太地址的格式
+			foreach ($user_address as $_val_address) {
+				$address = eth_address($_val_address);
+				if ($address === false) {
+					$this->assign('error_address', L('subscription_error_address'));
+					$error = 1;
+					break;
+				}
+				//查询以太地址是否存在
+				$address_info = $this->Ethpurse->get_address($_val_address);
+				if (!empty($address_info)) {
+					$this->assign('error_address', L('subscription_error_address1'));
+					$error = 1;
+					break;
+				}
+			}
+			
+			// 输入金额判断
+			if (!is_numeric($user_money) && $user_money < 0) {
+				$this->assign('error_money', L('subscription_error_money'));
+				$error = 1;
+			}
+
+			if ($error != 1) {
+				
+				// 增加用户的以太地址
+				foreach ($user_address as $_add_val) {
+					if (!empty($_add_val)) {
+						if ($this->count_address >= 3) {
+							$this->assign('error_address', L('subscription_error_address_num'));
+							$error = 2;
+							break;
+						}
+						//增加以太地址
+						$address_id = $this->Ethpurse->add_address($this->uid, $_add_val);
+						if ($address_id <= 0) {
+							$this->assign('error_address', L('subscription_error_address2'));
+							$error = 2;
+							break;
+						}
+						$this->count_address++;
+					}
+				}
+				// 计算一共可以购买多少以太币
+				// $total_eth = $this->count_address * 500;
+				//获取M值
+		        $Purchase = D('Purchase');
+		        $uid_info = $Purchase->get_uid_num($this->uid);
+		        //算uid的总量
+		        foreach ($uid_info as $_val) {
+		        	$M += $_val['num'];
+		        }
+	        	$now_num = $M + $user_money;
+	        	// if ($now_num <= $total_eth) {
+	        	// 增加以太币交易记录
+				$pid = $Purchase->ethadd($this->uid, $user_money);
+				if ($pid <= 0) {
+					$this->assign('error_money', L('subscription_error_money1'));
+					$error = 2;
+				}
+	    //     	} else {
+	    //     		$this->assign('error_money', L('subscription_error_money1'));
+					// $error = 2;
+	    //     	}
+				
+				if ($error == 2) {
+					//删除以太地址
+					foreach ($user_address as $_add_val) {
+						$address_id = $this->Ethpurse->del_address($_add_val);
+					}
+					//删除金额
+					$Purchase->del_purchase($pid);
+					
+					$email = $user_email;
+					$real_name = $user_name;
+				} else {
+					setcookie('user_money',$user_money,time()+3600);
+					$this->redirect('subscription/success');
+				}
+			}
+		}
+		unset($error);
+
+		$this->display();
+    }
+    // 提示用户转账
+    public function prompt() {
+		//获取购买的以太币
+    	//获取M值
+        $Purchase = D('Purchase');
+        $uid_info = $Purchase->get_uid_num($this->uid);
+
+        //算uid的总量
+        foreach ($uid_info as $_val) {
+        	$M += $_val['num'];
+        }
+    	
+    	$this->assign('N', $this->Num);
+    	$this->assign('M', $M);
+    	$this->display();
+    }
+    //查询交易记录
+    public function record() {
+    	$total_lvt = 0;
+    	$k = 0;
+    	foreach ($this->address_list as $_val) {
+    		$DetailIifo = $this->Order->GetOrderDetail($_val['address']);
+    		if ($DetailIifo !== false && !empty($DetailIifo)) {
+	    		foreach ($DetailIifo as $_each_info) {
+	    			$address_detail[$k]['address'] = $_val['address'];
+	    			$address_detail[$k]['value'] = eth_money($_each_info['value']);
+	    			$address_detail[$k]['lvt_num'] = eth_lvt($address_detail[$k]['value']);
+	    			$address_detail[$k]['add_time'] = date("Y/m/d H:i", $_each_info['timeStamp']);
+	    			$total_lvt += $address_detail[$k]['lvt_num'];
+	    			$k++;
+	    		}
+	    	} else {
+	    		$address_detail[$k]['address'] = $_val['address'];
+    			$address_detail[$k]['value'] = "";
+    			$address_detail[$k]['lvt_num'] = "";
+    			$address_detail[$k]['add_time'] = "";
+    			$k++;
+	    	}
+		}
+
+    	$this->assign('total_lvt', $total_lvt);
+    	$this->assign('address_detail', $address_detail);
+    	$this->display();
+    }
+    //新增以太地址
+    public function addaddress($address = '') {
+    	if (IS_POST) {
+    		if ($this->count_address >= 3) {
+    			$content['code'] = 3;
+    			$content['msg'] = L('subscription_error_address_num');
+    			$error = 1;
+    		}
+    		// 以太地址校验
+    		$address_eth = eth_address($address);
+    		if ($address_eth === false) {
+    			$content['code'] = 1;
+    			$content['msg'] = L('subscription_error_address');
+    			$error = 1;
+    		}
+    		
+			//查询以太地址是否存在
+			$address_info = $this->Ethpurse->get_address($address);
+
+			if (!empty($address_info)) {
+    			$content['code'] = 2;
+    			$content['msg'] = L('subscription_error_address1');
+    			$error = 1;
+    		}
+		
+			if ($error != 1) {
+				$re = $this->Ethpurse->add_address($this->uid, $address);	
+				if ($re > 0) {
+					$content['code'] = 0;
+    				$content['msg'] = L('subscription_msg_ok');
+				} else {
+					$content['code'] = 999;
+    				$content['msg'] = L('subscription_error_999');
+				}
+			}
+    		
+			unset($error);
+    	}
+    	echo json_encode($content);
+    }
+    public function success() {
+    	$user_money = $_COOKIE['user_money'];
+    	$this->assign('user_money', $user_money);
+    	$this->display();
+    }
+    public function finish() {
+    	$this->display();
+    }
+}

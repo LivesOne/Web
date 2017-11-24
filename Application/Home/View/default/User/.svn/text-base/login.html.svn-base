@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>共生币</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/index.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ys.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="layout">
+        <div class="header layout fixed-top fixed-top-bg">
+            <div class="container clearfix">
+                <div class="float-left">
+                    <img src="__STATIC__/assets/images/logo1.png" class="img-responsive logo" alt="">
+                </div>
+                <div class="float-right">
+                    <button class="button icon-navicon btn-index float-right" data-target="#nav-link2">
+                    </button>
+                    <ul class="nav nav-menu nav-inline nav-right nav-navicon" id="nav-link2">
+                        <li><a href="/">{$Think.lang.index_nav_1}</a> </li>
+                        <li><a href="/construction/index">{$Think.lang.index_nav_2}</a> </li>
+                        <li>
+                            <if condition="$lang eq 'en-us'">
+                                <a href="__PATADATA__/lvt subscription agreement.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            <else/>
+                                <a href="__PATADATA__/lvt 认购协议中文版.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            </if>
+                        </li>
+                        <li><a href="/subscription/index">{$Think.lang.index_nav_4}</a></li>
+                        <if condition="$lang eq 'en-us'">
+                            <li><a href="?l=zh-cn">简体中文</a></li>
+                        <else/>
+                            <li><a href="?l=en-us">{$Think.lang.index_nav_5}</a></li>
+                        </if>
+                        <li class="active">
+                            <if condition="$username eq ''">
+                                <a href="/user/login">{$Think.lang.text_login}</a>
+                            <else/>
+                                <a href="/user/logout" id="logout">{$username}[退出]</a>
+                            </if>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout ys_layout">
+        <div class="container ys_h ys_login">
+            <div class="line yslog">
+                <div class="text-center ys_login_title">{$Think.lang.login_title}</div>
+                <form method="post" action="__SELF__">
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="username">{$Think.lang.login_mobile_phone}</label>
+                        </div>
+                        <div class="field">
+                            <div class="input-group input-second">
+                                <span class="addbtn btn-qh">+86</span>
+                                <input type="hidden" value="86" name="area_code" id="area_code">
+                                <input type="text" class="input" id="mobile" name="mobile" data-validate="{$Think.lang.login_mobile_error}" value="{$mobile}" placeholder="{$Think.lang.login_mobile_phone}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="username">{$Think.lang.login_vcode}</label>
+                        </div>
+                        <div class="field">
+                            <div class="input-group input-second">
+                                <input type="text" class="input input-code" name="verify_code" data-validate="{$Think.lang.text_must}" placeholder="{$Think.lang.login_vcode}" />
+                                <span class="addbtn btn-code">{$Think.lang.login_get_vcode}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gs-error">{$error}</div>
+                    <button type="submit" class="button bg-main radius-none button-block text-center btn btn-log">{$Think.lang.text_login}</button>
+                </form>    
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="dialog-login">
+            <div class="dialog-header">
+                {$Think.lang.login_country}<span class="dialog-close"></span>
+            </div>
+            <div class="dialog-content">
+                <ul>
+                    <foreach  name="_sms_countrys" item="_val" key="key">
+                         <li class="clearfix">
+                            <span class="float-left">{$_val[$lang_num]}</span>
+                            <span class="float-right qh">+{$_val[1]}</span>
+                         </li>
+                    </foreach>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="layout text-center layout-footer">
+        {$Think.lang.text_jijin}
+    </div>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <!-- endbuild -->
+    <script src="__STATIC__/assets/jsmin/jquery.countdown.js"></script>
+    <script src="__STATIC__/assets/jsmin/clipboard.min.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <script>
+        $(function() {
+            var flag = true;
+            var timeouttime = 60;
+            var timeinterval = null;
+            clearInterval(timeinterval);
+            if ($.cookie('recordtime')) {
+                var nowtime = new Date().getTime();
+                var time = 60 - Math.round((nowtime - $.cookie('recordtime'))/1000);
+                if (time >= 0) {
+                    timeouttime = time;
+                    timeinterval = setInterval(function() {
+                        timeouttime --;
+                        $(".btn-code").html(timeouttime + "{$Think.lang.login_vcode_send_later}");
+                        if (timeouttime == 0) {
+                            $(".btn-code").html("{$Think.lang.login_vcode_resend}");
+                            timeouttime = 60;
+                            clearInterval(timeinterval);
+                            $.cookie('recordtime', null); 
+                            flag = true;
+                        }
+                    }, 1000);
+                } else {
+                    timeouttime = 60;
+                    $.cookie('recordtime', null);
+                }
+            }
+            $(".btn-code").on('click',function(event) {
+                /* Act on the event */
+                event.preventDefault();
+                var $that = $(this);
+                var area_code = $("#area_code").val();
+                var mobile = $("#mobile").val();
+                if (mobile === '') {
+                    $(".gs-error").text("{$Think.lang.login_mobile}");
+                    return;
+                } else if (!$("#mobile").closest('.form-group').hasClass('check-error')) {
+                    if (flag) {
+                        flag = false;
+                        var nowtime = new Date().getTime();
+                        if (!$.cookie('recordtime')) {
+                            $.cookie('recordtime', nowtime);
+                        }
+                         
+                        $.ajax({
+                            url: "/home/yure/valicode",
+                            method: 'post',
+                            dataType: 'json',
+                            data: {
+                                mobile: mobile,
+                                area_code: area_code
+                            },
+                            success: function(response) {
+                                switch (response.code) {
+                                    case 1: 
+                                        $.cookie('recordtime', null);
+                                        break;
+                                    case 102: 
+                                        $(".gs-error").text(response.msg);
+                                        $that.html("{$Think.lang.login_vcode_resend}");
+                                        timeouttime = 60;
+                                        clearInterval(timeinterval);
+                                        $.cookie('recordtime', null); 
+                                        flag = true;
+                                        break;
+                                    case 103: 
+                                        $(".gs-error").text(response.msg);
+                                        $that.html("{$Think.lang.login_vcode_resend}");
+                                        timeouttime = 60;
+                                        clearInterval(timeinterval);
+                                        $.cookie('recordtime', null); 
+                                        flag = true;
+                                        break;
+                                    case 104: 
+                                        $(".gs-error").text(response.msg);
+                                        $that.html("{$Think.lang.login_vcode_resend}");
+                                        timeouttime = 60;
+                                        clearInterval(timeinterval);
+                                        $.cookie('recordtime', null); 
+                                        flag = true;
+                                        break;
+                                }
+                            },
+                            error: function(error) {
+
+                            }
+                        });
+                        timeinterval = setInterval(function() {
+                            timeouttime --;
+                            $that.html(timeouttime + "{$Think.lang.login_vcode_send_later}");
+                            if (timeouttime == 0) {
+                                $that.html("{$Think.lang.login_vcode_resend}");
+                                timeouttime = 60;
+                                clearInterval(timeinterval);
+                                $.cookie('recordtime', null); 
+                                flag = true;
+                            }
+                        }, 1000);
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>

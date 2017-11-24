@@ -1,0 +1,51 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace User\Api;
+
+class OrderApi{
+    const URL = 'http://10.100.15.103:8888';
+    const ORDER_URL = '/v1/tx';
+    const ADDRESS_TOTAL = '/v1/balance';
+    const RULE_URL = 1;
+
+    // 查询订单
+    public function GetOrderDetail($address = ''){
+    	// $address = '0xf46b926959200a613a8557942f1d71999b1de716';
+        $url_address = self::URL.self::ORDER_URL.'?address='.$address;
+        $content = requestAPI($url_address, $type = 'get');
+        if ($content['code'] == 0) {
+    		return $content['result'];
+    	} else {
+    		return false;
+    	}
+    }
+
+    // 查询address交易记录
+    public function GetAddressMoney($uid = '', $address = array()) {
+    	$uid = 1;
+    	// $address = array("0x63dC9762F6f259E2CB106dE70A5bFeD8293c08E3");
+    	$url_address = self::URL.self::ADDRESS_TOTAL;
+    	$datas = array("uid" => $uid, 
+    				  "address" => $address,
+    				  "refresh" => true);
+    	// $datas = json_encode($datas);
+    	$header = array(
+            // "Content-Length: " . mb_strlen($datas),
+            "Content-type:application/json"
+        );
+    	$content = requestAPI($url_address, $type = 'post', $datas, $header);
+    	if ($content['code'] == 0) {
+    		return $content['result'];
+    	} else {
+    		return false;
+    	}
+    	
+    }
+}

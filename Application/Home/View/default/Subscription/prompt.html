@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.index_index_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/layer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/index.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/jquery.countdown.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ys.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="layout">
+        <div class="header layout fixed-top fixed-top-bg">
+            <div class="container clearfix">
+                <div class="float-left">
+                    <img src="__STATIC__/assets/images/logo1.png" class="img-responsive logo" alt="">
+                </div>
+                <div class="float-right">
+                    <button class="button icon-navicon btn-index float-right" data-target="#nav-link2">
+                    </button>
+                    <ul class="nav nav-menu nav-inline nav-right nav-navicon" id="nav-link2">
+                        <li><a href="/">{$Think.lang.index_nav_1}</a> </li>
+                        <li><a href="/construction/index">{$Think.lang.index_nav_2}</a> </li>
+                        <li>
+                            <if condition="$lang eq 'en-us'">
+                                <a href="__PATADATA__/Symbiosism Chain And LVT Whitepaper.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            <else/>
+                                <a href="__PATADATA__/lvt 认购协议中文版.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            </if>
+                        </li>
+                        <li class="active"><a href="/subscription/index">{$Think.lang.index_nav_4}</a></li>
+                        <li>
+                            <if condition="$username eq ''">
+                                <a href="/user/login">{$Think.lang.text_login}</a>
+                            <else/>
+                                <a href="/Ucenter/index">{$username}</a><a href="/user/logout" id="logout">[{$Think.lang.text_signout}]</a>
+                            </if>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout ys-layout">
+        <div class="container ys_wrap text-center">
+            <!-- <img src="__STATIC__/assets/images/ys_h.png" class="ys_h" alt=""> -->
+            <div class="ys_tt">{$Think.lang.subscription_header_ext}</div>
+            <div class="ys_ts">{$Think.lang.subscription_header_exts}</div>
+            <!-- <div id="countdown"></div> -->
+        </div>
+    </div>
+    <div class="layout back-layout">
+        <div class="container">
+            <div class="back"><a href="/subscription/index.html"><img src="__STATIC__/assets/images/back.png" alt="">{$Think.lang.text_back}</a></div>
+        </div>
+    </div>
+    <div class="layout ys_layout ys_buy">
+        <div class="container text-center">
+            <p class="ys_buy_fail_p">{$Think.lang.subscription_prompt_order} {$M}（ETH），{$Think.lang.subscription_prompt_actual} {$N}（ETH），{$Think.lang.subscription_prompt_fast}</p>
+            <div class="ys_buy_address ys_buy_address_fail"><span id="bar">0x33DC7650501024e1b73032b5b6Ed6c99dEBeD14a</span><button class="ys_copy" id="ys_copy" data-clipboard-action="copy" data-clipboard-target="#bar">{$Think.lang.text_copy}</button></div>
+            <div class="ys_buy_fail_p">{$Think.lang.subscription_prompt_case_see}</div>
+            <div class="text-center ys_btn ys_buy_btn">
+                <a href="/subscription/record" class="ys_btn_join">{$Think.lang.subscription_text_record}</a>
+            </div>
+        </div>
+    </div>
+    <div class="layout text-center layout-footer">
+        {$Think.lang.text_jijin}
+    </div>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <script src="__STATIC__/assets/jsmin/layer.js"></script>
+    <!-- endbuild -->
+    <script src="__STATIC__/assets/jsmin/jquery.countdown.js"></script>
+    <script src="__STATIC__/assets/jsmin/clipboard.min.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <script>
+        $(function(){
+
+            //复制
+            var clipboard = new Clipboard('.ys_copy');
+            clipboard.on('success', function(e) {
+                // console.info('Action:', e.action);
+                // console.info('Text:', e.text);
+                // console.info('Trigger:', e.trigger);
+                layer.msg("{$Think.lang.text_copy_suc}");
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function(e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+            
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>{$Think.lang.index_index_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/index.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ys.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ucenter.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/help.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="layout index-layout">
+            <div class="header layout fixed-top <?php if("__SELF__" != '/') echo 'fixed-top-bg'; ?>">
+            <div class="container clearfix">
+                <div class="float-left">
+                    <img src="__STATIC__/assets/images/logo1.png" class="img-responsive logo" alt="">
+                </div>
+                <div class="float-right">
+                    <button class="button icon-navicon btn-index float-right" data-target="#nav-link2">
+                    </button>
+                    <ul class="nav nav-menu nav-inline nav-right nav-navicon" id="nav-link2">
+                        <li <?php if("__SELF__" == '/') echo 'class="active"'; ?> ><a href="/">{$Think.lang.index_nav_1}</a> </li>
+                        <li <?php if("__SELF__" == '/construction/index') echo 'class="active"'; ?>><a href="/construction/index">{$Think.lang.index_nav_2}</a> </li>
+                        <li>
+                            <if condition="$lang eq 'en-us'">
+                                <a href="__PATADATA__/LivesChain & LivesToken Whitepaper V1.1.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            <else/>
+                                <a href="__PATADATA__/白皮书.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            </if>
+                        </li>
+                        <li <?php if(CONTROLLER_NAME == 'Help') echo 'class="active"'; ?>><a href="/help">{$Think.lang.index_nav_4}</a></li>
+                        <li class="download_li">
+                            <a href="javascript:;" class="downloadAPP">{$Think.lang.index_nav_10}</a>
+                        </li>
+                        <li <?php if( CONTROLLER_NAME =='User' || CONTROLLER_NAME =='Ucenter'|| CONTROLLER_NAME =='LvtManage'|| CONTROLLER_NAME =='YtAddress'|| CONTROLLER_NAME =='ExtractionMoney') echo 'class="active"'; ?>>
+                            <if condition="$username eq ''">
+                                <a href="/user/login">{$Think.lang.text_login}</a>
+                            <else/>
+                                <a href="/Ucenter/index">{$username}</a><a href="/user/logout" id="logout">[{$Think.lang.text_signout}]</a>
+                            </if>
+                        </li>
+                        <if condition="$lang eq 'en-us'">
+                            <li><a href="?l=zh-cn">简体中文</a></li>
+                        <else/>
+                            <li><a href="?l=en-us">{$Think.lang.index_nav_5}</a></li>
+                        </if>
+
+                    </ul>
+                    <div class="download_app">
+                        <div class="line clearfix">
+                            <div class="xl6 xs6 xm6 xb6">
+                                <img src="__STATIC__/assets/images/appqrcode.png" alt="">
+                            </div>
+                            <div class="xl6 xs6 xm6 xb6">
+                                <div class="downlaod-scan">{$Think.lang.index_nav_download_11}</div>
+                                <div class="download-d">{$Think.lang.index_nav_download_12}</div>
+                                <div class="download-d">{$Think.lang.index_nav_download_13}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <block name="body"> </block>
+    </body>
+</html> -->

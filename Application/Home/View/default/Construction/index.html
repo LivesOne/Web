@@ -1,0 +1,116 @@
+<include file="Public/header"/>
+    </div>
+    <div class="layout text-center layout-team">
+        <if condition="$lang eq 'en-us'">
+            <div class="line">
+                <img src="__STATIC__/assets/images/banner.png" class="img-responsive team-img">
+            </div>
+        <else/>
+            <div class="line">
+                <img src="__STATIC__/assets/images/banner_zh.png" class="img-responsive team-img">
+            </div>
+        </if>
+    </div>
+    <div class="layout layout-team-two">
+        <div class="text-center team-title">
+            {$Think.lang.team-title-two} 
+        </div>
+        <div class="container">
+            <div class="line line-team-two clearfix">
+                <div class="xl2 xs2 xm2 xb2">
+                    <img src="__STATIC__/assets/images/jeff.jpg" class="img-title" alt="JEFF">
+                    <p class="team-person-title text-center">{$Think.lang.team-founder-name-one}</p>
+                </div>
+                <div class="xl10 xs10 xm10 xb10">
+                    <p class="team-con-p">{$Think.lang.team-founder-des-one-1}</p>
+                    <p class="team-con-p">{$Think.lang.team-founder-des-one-2}</p>
+                </div>
+            </div>
+            <div class="line line-team-two clearfix">
+                <div class="xl2 xs2 xm2 xb2">
+                    <img src="__STATIC__/assets/images/zhb.jpg" alt="zhb" class="img-title">
+                    <p class="team-person-title text-center">{$Think.lang.team-founder-name-two}</p>
+                </div>
+                <div class="xl10 xs10 xm10 xb10">
+                    <p class="team-con-p">{$Think.lang.team-founder-des-two-1}</p>
+                </div>
+            </div>
+            <div class="line line-team-two clearfix">
+                <div class="xl2 xs2 xm2 xb2">
+                    <img src="__STATIC__/assets/images/lhy.jpg" alt="lhy" class="img-title">
+                    <p class="team-person-title text-center">{$Think.lang.team-founder-name-thr}</p>
+                </div>
+                <div class="xl10 xs10 xm10 xb10">
+                    <p class="team-con-p">{$Think.lang.team-founder-des-thr-1}</p>
+                    <p class="team-con-p">{$Think.lang.team-founder-des-thr-2}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout layout-team-thr">
+        <div class="text-center team-title">
+            {$Think.lang.team-title-thr}
+        </div>
+        <div class="container">
+            <div class="line line-team-thr clearfix">
+                <div class="xl4 xs4 xm4 xb4">
+                    <img src="__STATIC__/assets/images/teamP1.png" class="img-responsive" alt="">
+                </div>
+                <div class="xl4 xs4 xm4 xb4">
+                    <img src="__STATIC__/assets/images/teamP2.png" class="img-responsive" alt="">
+                </div>
+                <div class="xl4 xs4 xm4 xb4">
+                    <img src="__STATIC__/assets/images/teamP3.png" class="img-responsive" alt="">
+                </div>
+            </div>
+            <p class="team-person-title1 text-center">{$Think.lang.team-title-thr-t}</p>
+            <p class="team-con-p-thr">{$Think.lang.team-title-thr-p-one}</p>
+            <p class="team-con-p-thr">{$Think.lang.team-title-thr-p-two}</p>
+            <p class="team-con-p-thr">{$Think.lang.team-title-thr-p-thr}</p>
+        </div>
+    </div>
+    <div class="layout layout-team-fore">
+        <div class="text-center team-title">
+            {$Think.lang.team-title-fore}
+        </div>
+        <div class="container">
+            <div class="line line-team-fore clearfix">
+                <div class="xl4 xs4 xm4 xb4 text-center">
+                    <img src="__STATIC__/assets/images/qh.jpg" class="img-title img-title1" alt="qh">
+                    <dl class="team-dl">
+                        <dt class="team-person-title2">{$Think.lang.team-person-title-one}</dt>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-1}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-2}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-3}</dd>
+                    </dl>
+                </div>
+                <div class="xl4 xs4 xm4 xb4  text-center">
+                    <img src="__STATIC__/assets/images/sqb.jpg" class="img-title img-title1" alt="sqb">
+                    <dl class="team-dl">
+                        <dt class="team-person-title2">{$Think.lang.team-person-title-two}</dt>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-4}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-5}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-6}</dd>
+                    </dl>
+                </div>
+                <div class="xl4 xs4 xm4 xb4 text-center">
+                    <img src="__STATIC__/assets/images/lyf.jpg" class="img-title img-title1" alt="lyf">
+                    <dl class="team-dl">
+                        <dt class="team-person-title2">{$Think.lang.team-person-title-thr}</dt>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-7}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-8}</dd>
+                        <dd class="team-con-div">{$Think.lang.team-person-con-9}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <!-- endbuild -->
+    
+</body>
+</html>

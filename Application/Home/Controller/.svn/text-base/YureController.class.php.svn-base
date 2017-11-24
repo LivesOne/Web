@@ -1,0 +1,287 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace Home\Controller;
+use User\Api\UserApi;
+
+/**
+ * 用户控制器
+ * 包括用户中心，用户登录及注册
+ */
+class YureController extends HomeController {
+
+	/* 用户中心首页 */
+	public function index(){
+		$this->assign('lang', $_COOKIE['lives_lvt_language']);
+		$this->display();
+	}
+
+	/* 手机注册 */
+	public function rglog($mobile = '', $verify_code = '', $area_code = '') {
+		$uid = is_login();
+		$User = new UserApi;
+		$infos = $User->info($uid);
+
+		if ($uid > 0 && empty($infos['2'])) {
+			$this->redirect('Home/Yure/info');
+			exit;
+		} else if ($uid > 0 && !empty($infos['2'])) {
+			$this->redirect('Home/Yure/eth');
+			exit;
+		}
+
+		if(IS_POST){
+			//手机验证
+			// $vcode = D('Vcode');
+			// $mobile_code = $vcode->verify($mobile);
+			$mobile = strip_tags($mobile);
+			$verify_code = strip_tags($verify_code);
+			$area_code = strip_tags($area_code);
+
+			$data = array(
+                'area_code' => (int)$area_code,
+                'phone_no' => $mobile,
+                'validation_code' => $verify_code,
+                'vid' => 2,
+                'expired' => 300,
+            );
+			$rs = get_vcode_devali($data);
+			// $rs = 1;
+			//验证码已通过
+			if ($rs == 1) {
+				//验证手机号是否注册,如果注册直接登陆
+				$info = $User->mobile_uid($mobile);
+				/* 登录用户 */
+				$Member = D('Member');
+				// 用户存在
+				if ($info['id'] > 0) {
+					if($Member->login($info['id'])){ //登录用户
+						//表示email不为空--直接跳转购买页
+						if (!empty($info['email'])) {
+							$this->redirect('Home/Yure/eth');
+							exit();
+						} else {
+							$this->redirect('Home/Yure/info');
+							exit();
+						}
+					} else {
+						$this->assign('error', L('error_login'));
+					}
+				} else {
+					//先注册，然后跳转到用户信息
+					/* 调用注册接口注册用户 */
+					$uid = $User->yitai_re($mobile);
+					if($Member->login($uid)){ //登录用户
+						$this->redirect('Home/Yure/info');
+						exit();
+					} 
+					$this->assign('error', L('error_register_fail'));
+				}
+				
+			} else {
+				if ($rs == 102) {
+					$error = L('error_vcode_102');
+				} else if ($rs == 103) {
+					$error = L('error_vcode_103');
+				} else {
+					$error = L('error_vcode_999');
+				}
+				$this->assign('error', $error);
+			}
+		}
+		if ($_COOKIE['lives_lvt_language'] == 'en-us') {
+			$lang_num = 3;
+		} else {
+			$lang_num = 2;
+		}
+
+		$this->assign('mobile', $mobile);
+		$this->assign('lang_num', $lang_num);
+		$this->assign('_sms_countrys', getSMSCountryListV2());
+
+		$this->display();	
+	}
+
+	/* 用户信息注册 */
+	public function info($real_name = '', $yt_address = '', $email = '') {
+		$uid = is_login();
+		$User = new UserApi;
+		$infos = $User->info($uid);
+
+		if ($uid <= 0) {
+			$this->redirect('Home/Yure/index');
+		} else if ($uid > 0 && !empty($infos['2'])) {
+			$this->redirect('Home/Yure/eth');
+		} else if(IS_POST){
+
+			$real_name = strip_tags($real_name);
+			// $yt_address = strip_tags($yt_address);
+
+			// if (preg_match("/[\x7f-\xff]/", $yt_address) || empty($yt_address)) {
+			//     $this->assign('error', L('error_china_text'));
+			//     $error = 1;
+			// }
+
+			if (emailcheck($email) === false) {
+				$this->assign('error', L('error_email'));
+				$error = 1;
+			}
+
+			/* 修改用户信息内容 */
+			if ($error != 1) {
+				// 注销地址判断
+				// $list = $User->get_yit_address($yt_address);
+				// if ($yt_address == $list['yt_address']) {
+				// 	$this->assign('error', L('error_eth_address'));
+				// } else {
+
+				$User->updateyitai($uid, $real_name, $email);
+
+				if($uid > 0){ //注册成功
+					/* 登录用户 */
+					$Member = D('Member');
+					if($Member->login($uid)){ //登录用户
+						//TODO:跳转到购买页
+						$this->redirect('Home/Yure/eth');
+						exit();
+					} else {
+						$this->assign('error', L('error_register'));
+					}
+
+				} else { //注册失败，显示错误信息
+					$this->assign('error', L('error_register_fail'));
+				}
+				// }
+			}
+			unset($error);
+			$this->assign('real_name', $real_name);
+			// $this->assign('yt_address', $yt_address);
+			$this->assign('email', $email);
+
+		}
+		// $this->assign('mobile', $_COOKIE['mobile']);
+		$this->display();
+
+	}
+
+	/* 购买货币页面 */
+	public function eth($num = '', $before_ratio = '') {
+		$uid = is_login();
+		$User = new UserApi;
+		$infos = $User->info($uid);
+
+		if ($uid <= 0) {
+			$this->redirect('Home/Yure/index');
+			exit;
+		} else if ($uid > 0 && empty($infos['2'])) {
+			$this->redirect('Home/Yure/index');
+			exit;
+		}
+
+		if(IS_POST){
+			if (is_numeric($num) && $num > 0) {
+				$Purchase = D('Purchase');
+				$pid = $Purchase->ethadd($uid, $num, $before_ratio, 2);
+				if ($pid > 0) {
+					//购买成功
+					// $User = new UserApi;
+					// $infos = $User->info($uid);
+					$body = body_email($_COOKIE['lives_lvt_language'], $num, $infos[4], 9333);
+					mymail(array($infos[2]),L('email_title'),$body);
+					$this->redirect('Home/Yure/end');
+					exit;
+				} else {
+					$this->assign('error', L('error_payment'));
+				}
+			} else {
+				$this->assign('error', L('error_total'));
+			}
+		}
+		$this->display();
+	}
+
+	public function protocol() { 
+		$this->assign('lang', $_COOKIE['lives_lvt_language']);
+		$this->display();
+	}
+
+	public function end() {
+		$uid = is_login();
+		$User = new UserApi;
+		$infos = $User->info($uid);
+		if ($uid > 0 && !empty($infos['2'])) {
+			$this->assign('email', $infos['2']);
+		} else {
+			$this->redirect('Home/Yure/index');
+		}
+		$this->display();
+	}
+	/* 获取手机验证码 */
+	public function valicode($mobile = '',$area_code = '', $lang = '') {
+		if (!is_numeric($mobile) || strlen($mobile) != 11) {
+	        $content['code'] = 2;
+			$content['msg'] = L('error_mobile_text');
+	    } else {
+			if ($area_code == 86 || $area_code == 852 || $area_code == 853) {
+				$lang = 'cn';
+			} else {
+				$lang = 'en-us';
+			}
+
+			if ($_COOKIE['lives_lvt_language'] == 'en-us') {
+				$lang = 'en-us';
+			} else {
+				$lang = 'cn';
+			}
+
+			$rs = get_vcode($lang, (int)$area_code, $mobile);
+
+			$content['code'] = $rs;
+
+			if ($rs == 1) {
+				$msg = L('msg_ok');
+			} else if ($rs == 102) {
+				$msg = L('error_mobile_102');
+			} else if ($rs == 103) {
+				$msg = L('error_mobile_103');
+			} else if ($rs == 104) {
+				$msg = L('error_mobile_104');
+			} else {
+				$msg = L('error_mobile_999');
+			}
+			$content['msg'] = $msg;
+		 }
+		echo json_encode($content);
+	}
+
+	
+	/**
+	 * 获取用户注册错误信息
+	 * @param  integer $code 错误编码
+	 * @return string        错误信息
+	 */
+	private function showRegError($code = 0){
+		switch ($code) {
+			case -1:  $error = '用户名长度必须在16个字符以内！'; break;
+			case -2:  $error = '用户名被禁止注册！'; break;
+			case -3:  $error = '用户名被占用！'; break;
+			case -4:  $error = '密码长度必须在6-30个字符之间！'; break;
+			case -5:  $error = '邮箱格式不正确！'; break;
+			case -6:  $error = '邮箱长度必须在1-32个字符之间！'; break;
+			case -7:  $error = '邮箱被禁止注册！'; break;
+			case -8:  $error = '邮箱被占用！'; break;
+			case -9:  $error = '手机格式不正确！'; break;
+			case -10: $error = '手机被禁止注册！'; break;
+			case -11: $error = '手机号被占用！'; break;
+			default:  $error = '未知错误';
+		}
+		return $error;
+	}
+
+}

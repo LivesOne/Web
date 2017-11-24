@@ -1,0 +1,1 @@
+$(function(){var a=(new Date).getTime()+864e6;new Date>a&&alert("time out"),$("#countdown").countdown({timestamp:a})});

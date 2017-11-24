@@ -1,0 +1,28 @@
+<h2>{$category.title}</h2>
+<ul class="menu">
+	<foreach name="categoryArr" item="each_cate" key="c">
+	    <li>
+	    	<if condition="$info['category_id'] eq $each_cate['id']">
+	        	<a href="javascript:;" class="menu_list active">	        	
+	        		<i class="upward"></i>{$each_cate.title}
+				</a>
+				<ul class="ul_menu" style="display:block;">
+	        <else/>
+	        	<a href="javascript:;" class="menu_list">	        	
+	        		<i class="downward"></i>{$each_cate.title}
+				</a>
+				<ul class="ul_menu">
+			</if>
+	             <foreach name="each_cate.lists" item="each_list" key="l">
+	             	<if condition="$info['id'] eq $each_list['id']">
+			        	<li><a href="{$path_url}/help/{$each_cate['name']}/{$each_list['name']}" class="subactive">{$each_list.title}</a></li>
+			        <else/>
+			        	<li><a href="{$path_url}/help/{$each_cate['name']}/{$each_list['name']}">{$each_list.title}</a></li>
+					</if>
+			    </foreach>
+	        </ul>
+	    </li>
+	</foreach>
+ </ul>
+
+<!-- end -->

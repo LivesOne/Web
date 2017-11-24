@@ -1,0 +1,321 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul,li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.gs-line {
+    padding-top: 10px;
+}
+.logo {
+    width: 34px;
+    height: 26px;
+}
+.livestoken {
+    width: 120px;
+    height: 151px;
+    margin: 33px auto 0px;
+}
+.hd-end-img {
+    width: 210px;
+    height: 220px;
+    margin: 108px auto 26px;
+}
+.gs-content {
+    margin: 0px 30px;
+}
+.gs-title {
+    margin-top: 32px;
+    font-size: 24px;
+    color: #312F2C;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.gs-p {
+    margin-top: 32px;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.btn {
+    background: #FFAE1F;
+    margin-top: 60px;
+    height: 40px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: -0.34px;
+    border: 0 none;
+}
+.gs-zs {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 0;
+}
+.footer {
+    margin-top: 36px;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+}
+.rglog {
+    padding-top: 40px;
+}
+.input-group {
+    width: 100%;
+}
+.input-first {
+    border: 1px solid #FFAE1F;
+    padding: 4px 0px;
+}
+.input-group .addbtn.btn-qh {
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #d4d4d4;
+    cursor: pointer;
+}
+.input-second {
+    border: 1px solid #d4d4d4;
+    padding: 4px 8px 4px 0px;
+}
+.input-group:focus {
+    border-color: #FFAE1F;
+}
+.input-group .addbtn.btn-code {
+    background: #666666;
+    margin-right: 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #FFFFFF;
+    min-width: 90px;
+    padding: 0 6px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.input {
+    border: 0 none;
+    outline: 0;
+    box-shadow: none;
+}
+.input:focus {
+
+}
+.button[disabled] {
+    background: #D5D5D5;
+    opacity: 1;
+}
+.mask {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0,0,0,0.40);
+    z-index: 10;
+}
+.dialog-login {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-indent: 16px;
+    background-color: #FFFFFF;
+} 
+.dialog-header {
+    position: relative;
+    background: #F5F5F5;
+    height: 53px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 53px;
+}
+.dialog-close {
+    background: url('../images/close.png') no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+.dialog-content {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 16px;
+    color: #666666;
+}
+.dialog-content ul li {
+    padding: 12px 16px 12px 0px;
+    border-bottom: 1px solid #d4d4d4;
+    cursor: pointer;
+}
+.rgsignup .input {
+    height: 40px;
+    border: 1px solid #d4d4d4;
+    text-indent: 6px;
+}
+.rgsignup .input:focus {
+    border-color: #FFAE1F;
+}
+.rgbuy {
+    padding-top: 20px;
+    color: #FFFFFF;
+}
+.line-top {
+    background: #524F4B;
+    padding-bottom: 36px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.line-top-p {
+    padding-top: 12px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.input-amount {
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-radius: 0;
+    max-width: 127px;
+    vertical-align: bottom;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+.line-img {
+    margin: -20px 0px;
+}
+.conversion {
+    position: relative;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+.line-bottom {
+    background: #312F2C;
+    padding:49px 0px 34px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.account {
+    margin-right: 30px;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.line-tip {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+.protocol {
+    margin-top: 32px;
+}
+.protocol a {
+    display: inline-block;
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: #666666;
+    text-decoration: underline;
+}
+.sel-icon {
+    display: inline-block;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/selected.png') no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+.sel-icon.active {
+    background: url('../images/nomal.png') no-repeat;
+    background-size: cover;
+}
+.rgbuysuc {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.suc {
+    width: 20px;
+    height: 18px;
+    margin-right: 10px;
+}
+.buysuc-tip {
+    background: #FFAE1F;
+    padding: 12px 0px;
+    font-size: 14px;
+    color: #fff
+}
+.finish {
+    margin: 60px auto 0px;
+    width: 140px;
+    height: 144px;
+}
+.finish-tip {
+    margin: 20px auto 0px;
+    width: 260px;
+    font-size: 14px;
+    color: #312F2C;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.finish-email {
+    margin-top: 30px;
+    background: #312F2C;
+    border-radius: 100px;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px 0px;
+}
+.protocol-title {
+    padding-top: 20px;
+    font-size: 18px;
+    color: #333333;
+}
+.protocol-content {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.gs-error {
+    margin-top: -12px;
+    color: #e33;
+}
+.line-rule {
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.hd-end-title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #000;
+}
+.hd-end-des {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #666;
+}
+.hd-end-des a {
+    text-decoration: underline;
+    color: #666;
+}

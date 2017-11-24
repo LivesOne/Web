@@ -1,0 +1,36 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace Home\Model;
+use Think\Model;
+
+/**
+ * 分类模型
+ */
+class VcodeModel extends Model{
+
+	public function verify($Mobile = '') {
+		/* 通过手机号获取验证码 */
+		$map = array();
+		if(is_numeric($Mobile)){
+			$map['mobile'] = $Mobile;
+		} else {
+			return '';
+		}
+		return $this->field($field)->where($map)->find();
+	}
+
+	public function delcode($id = '') {
+		/* 通过id删除 */
+		if ($id > 0) {
+			$this->where('id='.$id)->delete();	
+		}
+	}
+
+}

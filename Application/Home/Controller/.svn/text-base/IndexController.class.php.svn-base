@@ -1,0 +1,55 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace Home\Controller;
+use OT\DataDictionary;
+use User\Api\UserApi;
+/**
+ * 前台首页控制器
+ * 主要获取首页聚合数据
+ */
+class IndexController extends HomeController {
+
+    public function _initialize(){
+        $uid = is_login();
+        //获取个人信息
+        $this->User = new UserApi;
+        $this->infos = $this->User->info($uid);
+        $this->assign('username', $this->infos[1]);
+    }
+	//系统首页
+    public function index(){
+      
+
+        // $category = D('Category')->getTree();
+        // $lists    = D('Document')->lists(null);
+
+        // $this->assign('category',$category);//栏目
+        // $this->assign('lists',$lists);//列表
+        // $this->assign('page',D('Document')->page);//分页
+
+        //如果yure需要一直为中文。则注视写入的cookie
+        setcookie('lives_lvt_language','en-us',time()+3600);
+        $this->assign('lang', $_COOKIE['lives_lvt_language']);
+        $this->display();
+
+        // $this->redirect('Home/Yure/index');
+    }
+
+    public function construction() {
+        $this->assign('lang', $_COOKIE['lives_lvt_language']);
+        $this->display();
+    }
+
+    public function subscription() {
+        $this->assign('lang', $_COOKIE['lives_lvt_language']);
+        $this->display();
+    }
+
+}

@@ -1,0 +1,57 @@
+<include file="Public/header"/>
+</div>
+    <div class="container wrap_ucenter">
+        <div class="line clearfix">
+            <div class="xs12 xm3 xb3 layout_left">
+                <div class="layout_left_menu">
+                    <span class="icon-list-ul"></span>
+                </div>
+                <div class="layout_left_con">
+                    <h2>{$Think.lang.ucenter_personal}</h2>
+                    <ul>
+                        <li><a href="/Ucenter/index">{$Think.lang.ucenter_left_one}</a></li>
+                        <li><a href="/LvtManage/index">{$Think.lang.ucenter_left_two}</a></li>
+                        <li><a href="/YtAddress/index" class="active">{$Think.lang.ucenter_left_thr}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xs12 xm9 xb9 layout_right">
+                <div class="line detail">
+                    <div class="detail_tab">
+                        <a href="/YtAddress/addaddress" class="btn_addAddress">{$Think.lang.ucenter_add_address}</a>
+                        <div class="text-center">
+                            <div class="table-responsive">
+                                <table class="table detail_record_table">
+                                    <thead>
+                                        <tr>
+                                            <th>{$Think.lang.ucenter_address_name}</th>
+                                            <th>{$Think.lang.ucenter_address}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>   
+                                        <foreach  name="address_list" item="_list" key="key">
+                                            <tr>
+                                                <td>{$_list.eth_name}</td>
+                                                <td>{$_list.address}</td>
+                                            </tr>
+                                        </foreach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <!-- endbuild -->
+    
+</body>
+</html>

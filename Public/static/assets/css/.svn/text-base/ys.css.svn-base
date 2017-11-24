@@ -1,0 +1,263 @@
+body {
+    background-color: #f5f5f5;
+}
+.ys-layout {
+    background: url('../images/ys_bg.png') no-repeat;
+    background-size: cover;
+}
+.logo {
+    width: 124px;
+    height: 28px;
+}
+.ys_h {
+    padding-top: 120px;
+}
+.ys_t {
+    margin: 0px 0px 20px;
+    padding-top: 120px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+#countdown {
+    padding-bottom: 60px;
+}
+.ys_title {
+    margin-top: 64px;
+    font-size: 28px;
+    color: #333333;
+}
+.ys_con {
+    max-width: 800px;
+    margin: 20px auto 0px;
+}
+.ys_btn {
+    margin: 88px 0px 184px;
+}
+.ys_btn a {
+    display: inline-block;
+    background: #FFB01F;
+    min-width: 200px;
+    height: 48px;
+    padding: 0 15px;
+    line-height: 48px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.ys_btn_query {
+    margin-left: 80px;
+}
+.ys_login {
+    margin-bottom: 60px;
+}
+.ys_layout {
+    background-color: #f5f5f5;
+}
+.yslog {
+    padding: 24px 60px 60px;
+    margin: 0 auto;
+    max-width: 440px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+.ys_login_title {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #333333;
+}
+.btn-log {
+    background: #FFAE29;
+    border-radius: 2px;
+    line-height: 18px;
+}
+.btn-log:hover {
+    background: #E68F00 !important;
+}
+.label label {
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+ }
+ .back-layout {
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px 0 rgba(200,200,200,0.50);
+ }
+ .back {
+    font-size: 14px;
+    color: #666666;
+    line-height: 40px;
+ }
+ .back img {
+    vertical-align: middle;
+    margin-right: 8px;
+ }
+ .ys_form {
+    padding-top: 40px;
+    max-width: 600px;
+    margin: 0 auto 100px;
+ }
+ .ys_form .btn {
+    line-height: 18px;
+ }
+ .unit {
+    position: absolute;
+    top: 11px;
+    left: 36px;
+    font-size: 13px;
+    color: #888888;
+ }
+ .ys_account_wrap {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 13px;
+    color: #999999;
+ }
+ .input-tip {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #999999;
+ }
+ .ys_form .protocol {
+    margin-top: 22px;
+ }
+ .add-package {
+    font-size: 16px;
+    color: #666666;
+    cursor: pointer;
+ }
+ .add {
+    display: inline-block;
+    background: url(../images/add.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    margin-top: -4px;
+ }
+ /*.package-error {
+    display: none;
+ }*/
+ .supply_title {
+    margin: -40px 0px 50px;
+    font-size: 28px;
+    color: #333333;
+    border-bottom: 1px solid #C5C5C5;
+ }
+ .ys_buy {
+    padding-top: 75px;
+ }
+ .ys_buy_p {
+    margin-top: 22px;
+    font-size: 28px;
+    color: #333333;
+ }
+ .ys_buy_p_tip {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #666666;
+ }
+ .ys_buy_address {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 30px;
+    color: #FFB01F;
+ }
+ .ys_copy {
+    display: inline-block;
+    background: #B1B1B1;
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #F9F9F9;
+    margin: -6px 0px 0px 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0 none;
+ }
+ .ys_buy_fail_p {
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 21px;
+ }
+ .ys_buy_address_fail {
+    margin-bottom: 20px;
+ }
+ .ys_buy_btn {
+    margin-top: 20px;
+ }
+ .ys_record {
+    max-width: 800px;
+    margin: 0 auto 200px;
+ }
+ .ys_record_title span {
+    font-size: 28px;
+    color: #333333;
+ }
+ .ys_record_head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C5C5C5;
+ }
+ .ys_record_con {
+    margin-top: 20px;
+    border: 1px solid #C5C5C5;
+    font-size: 13px;
+ }
+ .table-responsive {
+    background-color: #FFFFFF;
+    padding-bottom: 60px;
+ }
+ .ys_record_title .button {
+    margin-top: 5px;
+    background: #FFB01F;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #F9F9F9;
+ }
+ .table tr {
+    border-bottom: 1px solid #C5C5C5;
+    position: relative;
+ }
+ .table th {
+    border-bottom: 0 none;
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+ }
+ .ys_record_tip {
+    margin-top: 20px;
+    margin-right: 20px;
+ }
+ .ys_record_tip_je {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #999999;
+ }
+ .ys_record_tip_je span {
+    font-size: 16px;
+    color: #FFB01F;
+    margin-right: 6px;
+ }
+ .ys_record_btn {
+    margin-left: 5px;
+    background-color: #211D3E;
+    color: #fff;
+    padding: 2px 4px;
+    border: 0 none;
+    font-size: 12px;
+ }
+ .ys_record_table th span {
+    font-size: 11px;
+ }
+ .input-group.focus {
+    border-color: #FFAE1F;
+}
+ .layout-footer {
+    position: fixed;
+    bottom: 0px;
+ }
+ .layout-footer-index {
+    position: relative;
+ }

@@ -1,0 +1,77 @@
+<include file="Public/header"/>
+    <div class="layout ys_layout">
+        <div class="container ys_h ys_login">
+            <div class="line">
+                <div class="ys_login_title clearfix">
+                    <a href="/user/login" class="ys_login_tf pull-left">{$Think.lang.login_title}</a>
+                    <a href="javascript:;" class="ys_login_tr pull-right active">{$Think.lang.register_title}</a>
+                </div>
+                <form class="yslog" method="post" action="__SELF__">
+                    <div class="form-group">
+                        <div class="field">
+                            <div class="input-group input-second">
+                                <span class="addbtn btn-qh">+86</span>
+                                <input type="hidden" value="86" name="area_code" id="area_code">
+                                <input type="text" class="input" id="mobile" name="mobile" data-validate="{$Think.lang.login_mobile_error}" value="{$mobile}" placeholder="{$Think.lang.login_mobile_phone}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="field">
+                            <div class="input-group input-second">
+                                <input type="text" class="input input-code" name="verify_code" data-validate="{$Think.lang.text_must}" placeholder="{$Think.lang.login_vcode}" />
+                                <span class="addbtn btn-code" data-later="{$Think.lang.login_vcode_send_later}" data-resend="{$Think.lang.login_vcode_resend}" data-errortxt="{$Think.lang.login_mobile}">{$Think.lang.login_get_vcode}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="field">
+                        <div class="input-group input-second">
+                          <input type="password" class="input input-newpass" maxlength="18" name="password" value="{$password}" placeholder="{$Think.lang.login_input_password}" data-validate="{$Think.lang.register_password}" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="field">
+                        <div class="input-group input-second">
+                          <input type="password" class="input input-pass-again" maxlength="18" name="repassword" value="{$repassword}" placeholder="{$Think.lang.login_input_password_again}" data-checktext="{$Think.lang.register_password_no}" data-validate="{$Think.lang.register_password_again}" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gs-error">{$error}</div>
+                    <button type="submit" class="button bg-main radius-none button-block text-center btn btn-log btn-sure">{$Think.lang.text_submit}</button>
+                </form>    
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="dialog-login">
+            <div class="dialog-header">
+                {$Think.lang.login_country}<span class="dialog-close"></span>
+            </div>
+            <div class="dialog-content">
+                <ul>
+                    <foreach  name="_sms_countrys" item="_val" key="key">
+                         <li class="clearfix">
+                            <span class="float-left">{$_val[$lang_num]}</span>
+                            <span class="float-right qh">+{$_val[1]}</span>
+                         </li>
+                    </foreach>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <!-- endbuild -->
+    <script src="__STATIC__/assets/jsmin/jquery.countdown.js"></script>
+    <script src="__STATIC__/assets/jsmin/clipboard.min.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+</body>
+</html>

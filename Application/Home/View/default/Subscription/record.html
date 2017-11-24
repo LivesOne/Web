@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.index_index_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/index.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ys.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="layout">
+        <div class="header layout fixed-top fixed-top-bg">
+            <div class="container clearfix">
+                <div class="float-left">
+                    <img src="__STATIC__/assets/images/logo1.png" class="img-responsive logo" alt="">
+                </div>
+                <div class="float-right">
+                    <button class="button icon-navicon btn-index float-right" data-target="#nav-link2">
+                    </button>
+                    <ul class="nav nav-menu nav-inline nav-right nav-navicon" id="nav-link2">
+                        <li><a href="/">{$Think.lang.index_nav_1}</a> </li>
+                        <li><a href="/construction/index">{$Think.lang.index_nav_2}</a> </li>
+                        <li>
+                            <if condition="$lang eq 'en-us'">
+                                <a href="__PATADATA__/Symbiosism Chain And LVT Whitepaper.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            <else/>
+                                <a href="__PATADATA__/lvt 认购协议中文版.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            </if>
+                        </li>
+                        <li class="active"><a href="/subscription/index">{$Think.lang.index_nav_4}</a></li>
+                        <li>
+                            <if condition="$username eq ''">
+                                <a href="/user/login">{$Think.lang.text_login}</a>
+                            <else/>
+                                <a href="/Ucenter/index">{$username}</a><a href="/user/logout" id="logout">[{$Think.lang.text_signout}]</a>
+                            </if>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout ys_layout">
+        <div class="container ys_h">
+            <div class="line">  
+                <div class="ys_record">
+                    <div class="ys_record_head">
+                        <div class="ys_record_title">
+                            <span>{$Think.lang.subscription_record_my_record}</span>
+                            <div class="float-right">
+                                <a href="" class="button ys_record_reflash">{$Think.lang.subscription_record_refresh}</a>
+                                <if condition="$count_address lt 3">
+                                    <a href="javascript:;" class="button ys_record_package">{$Think.lang.text_add_address}</a>
+                                </if>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="ys_record_con">
+                        <div class="table-responsive">
+                            <table class="table ys_record_table">
+                                <tr class="current">
+                                    <th>{$Think.lang.subscription_record_accounts}</th>
+                                    <th>{$Think.lang.subscription_record_num}<span>/ETH</span></th>
+                                    <th>{$Think.lang.subscription_record_get_num}<span>/LVT</span></th>
+                                    <th>{$Think.lang.subscription_record_time}</th>
+                                </tr>
+
+                                <foreach  name="address_detail" item="_lists" key="key">
+                                    <tr>
+                                    <td>{$_lists.address}</td>
+                                    <td>{$_lists.value}</td>
+                                    <td>{$_lists.lvt_num}</td>
+                                    <td>{$_lists.add_time}</td>
+                                </tr>
+                                </foreach>
+                            </table>
+                            <div class="margin-left gs-error"></div>
+                        </div>
+                        <div class="text-right ys_record_tip">{$Think.lang.subscription_record_my_order}</div>
+                        <div class="text-right ys_record_tip_je"><span>{$total_lvt}</span>LVT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout text-center layout-footer">
+        {$Think.lang.text_jijin}
+    </div>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/sha3.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <!-- endbuild -->
+    <script src="__STATIC__/assets/jsmin/jquery.countdown.js"></script>
+    <script src="__STATIC__/assets/jsmin/clipboard.min.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <script>
+        $(function() {
+            var $ys_record_table = $(".ys_record_table");
+            var i = {$count_address};
+            //添加package
+            $(".ys_record_package").click(function(event) {
+                /* Act on the event */
+                if (i < 4) {
+                    i++;
+                    if (i == 3) {
+                        $ys_record_table.append('<tr><td><input class="ys_record_input" /><button class="ys_record_btn">{$Think.lang.text_save}</button></td><td></td><td></td><td></td></tr>');
+                        $(this).hide();
+                        $(this).off();
+                    } else {
+                        $ys_record_table.append('<tr><td><input class="ys_record_input" /><button class="ys_record_btn">{$Think.lang.text_save}</button></td><td></td><td></td><td></td></tr>');
+                    }
+                    
+                } else {
+                    $(this).hide();
+                    $(this).off();
+                }
+            });
+            $(".ys_record_table").on('click', '.ys_record_btn', function(event) {
+                event.preventDefault();
+                /* Act on the event */
+                var $that = $(this);
+                var address1 = $that.siblings('.ys_record_input').val();
+
+                if (address1 == '') {
+                    $(".gs-error").text("{$Think.lang.text_record_rq}");
+                    return false;
+                } else if (!$.isAddressETH(address1)) {
+                    $(".gs-error").text("{$Think.lang.subscription_record_addresserror}");
+                    return false;
+                } else {
+                    $.ajax({
+                        url: "/subscription/addaddress",
+                        method: 'post',
+                        dataType: 'json',
+                        data: {
+                            address: address1
+                        },
+                        success: function(response) {
+                            switch (response.code) {
+                                case 0:
+                                    $ys_record_table.append('<tr><td>'+address1+'</td><td></td><td></td><td></td></tr>');
+                                    $that.closest('tr').remove();
+                                    $(".gs-error").text("");
+                                    break;
+                                case 1: 
+                                    $(".gs-error").text(response.msg);
+                                    break;
+                                case 2: 
+                                    $(".gs-error").text(response.msg);
+                                    break;
+                                case 3: 
+                                    $(".gs-error").text(response.msg);
+                                    break;
+                                case 999: 
+                                    $(".gs-error").text(response.msg);
+                                    break;
+                            }
+                        },
+                        error: function(error) {
+
+                        }
+                    });
+                }
+            });
+        })
+    </script>
+</body>
+</html>

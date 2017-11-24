@@ -1,0 +1,49 @@
+<?php
+// +----------------------------------------------------------------------
+// | OneThink [ WE CAN DO IT JUST THINK IT ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// +----------------------------------------------------------------------
+
+namespace Home\Model;
+use Think\Model;
+
+/**
+ * 分类模型
+ */
+class PurchaseModel extends Model{
+
+	public function ethadd($uid = '', $num = '', $before_ratio = '', $type = 1) {
+		$data = array(
+			'uid' => $uid,
+			'num' => $num,
+			'before_ratio' => $before_ratio,
+			'create_time' => date("Y-m-d H:i:s"),
+			'type' => $type,
+		);
+
+		/* 添加购买记录 */
+		if($this->create($data)){
+			$id = $this->add($this->create($data));
+			return $id ? $id : 0; //0-未知错误，大于0-注册成功
+		} else {
+			return $this->getError(); //错误详情见自动验证注释
+		}
+	}
+	public function get_uid_num($uid = '', $field = true) {
+		$map = array(
+			'uid' => $uid,
+		);
+
+		/* 返回前一条数据 */
+		return $this->field($field)->where($map)->select();
+	}
+	public function del_purchase($pid = '') {
+		$data = array(
+			'id' => $pid,
+		);
+		$this->where($data)->delete();
+	}
+}

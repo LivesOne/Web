@@ -1,0 +1,72 @@
+$(function() {
+    var $account = $(".ys_account");
+    // const ACCOUNTTWO = 186660;
+    // const ACCOUNTTHO = 481380;
+    // const ACCOUNTTFO = 1030380;
+    $(".btn-qh").click(function(event) {
+        /* Act on the event */
+        $(".mask").show();
+    });
+    $(".mask").on('click', '.dialog-close', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(this).closest('.mask').hide();
+    });
+    $(".dialog-content").on('click', 'li', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(".btn-qh").text($(this).find(".qh").text());
+        $(this).closest('.mask').hide();
+    });
+    $("#mobile, .input-code").focus(function(event) {
+        /* Act on the event */
+        $(this).closest('.input-group').addClass('focus');
+    });
+    $("#mobile, .input-code").blur(function(event) {
+        /* Act on the event */
+        $(this).closest('.input-group').removeClass('focus');
+    });
+
+    $(".sel-icon").click(function(event) {
+        /* Act on the event */
+        $(this).toggleClass('active');
+        $(this).hasClass('active') ? $(".btn-sure").attr('disabled', false) : $(".btn-sure").attr('disabled', true);
+    });
+    $(".input-acount").keyup(function(event) {
+        /* Act on the event */
+        var amountVal = $(this).val() || 0;
+        var len = amountVal.length;
+        if (len > 2) {
+            $(".unit").css('left', len * 14);
+        }
+        var account = 0;
+        if (amountVal >=20 && amountVal <50) {
+            //account = ACCOUNTTWO + (amountVal - 20) * 9824;
+            account = amountVal *  7368;
+        } else if (amountVal >= 50 && amountVal < 100) {
+            // account = ACCOUNTTHO + (amountVal - 50) * 10980;
+            account = amountVal *  8235;
+        } else if (amountVal >= 100 && amountVal <= 500) {
+            // account = ACCOUNTTFO + (amountVal - 100) * 12444;
+            account = amountVal *  9333;
+        }
+        $account.text(account);
+    });
+
+    var myDate=new Date();
+    myDate.setFullYear(2017,08,24);
+    myDate.setHours(00,00,00);
+    var ts = myDate.getTime();
+    //var ts = (new Date()).getTime() + 10*24*60*60*1000;
+    if((new Date()) > ts){
+        // The new year is here! Count towards something else.
+        // Notice the *1000 at the end - time must be in milliseconds
+        // ts = (new Date()).getTime() + 10*24*60*60*1000;
+        // newYear = false;
+        window.location.href = "/subscription/finish.html";
+    }
+        
+    $('#countdown').countdown({
+        timestamp   : ts
+    });
+})

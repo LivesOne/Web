@@ -1,0 +1,119 @@
+<include file="Public/header"/>
+    </div>
+    <div class="container wrap_ucenter">
+        <div class="line clearfix">
+            <div class="xs12 xm3 xb3 layout_left">
+                <div class="layout_left_menu">
+                    <span class="icon-list-ul"></span>
+                </div>
+                <div class="layout_left_con">
+                    <h2>{$Think.lang.ucenter_personal}</h2>
+                    <ul>
+                        <li><a href="/Ucenter/index">{$Think.lang.ucenter_left_one}</a></li>
+                        <li><a href="/LvtManage/index" class="active">{$Think.lang.ucenter_left_two}</a></li>
+                        <li><a href="/YtAddress/index">{$Think.lang.ucenter_left_thr}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xs12 xm9 xb9 layout_right">
+                <div class="line">
+                    <div class="xs6 xm3 xb3">
+                        <h4 class="total_assets">{$Think.lang.ucenter_lvt_total}</h4>
+                        <strong class="total_money">{$total_money}</strong>
+                    </div>
+                    <div class="xs6 xm4 xb4">
+                        <div class="total_assets">{$Think.lang.ucenter_lvt_available}: <span>{$now_use_money}</span></div>
+                        <div class="total_assets total_assets2">{$Think.lang.ucenter_lvt_frozen}: <span>{$total_extraction}</span><i class="help"></i><div class="tips-con">{$Think.lang.ucenter_lvt_frozen_tip}</div></div>
+                    </div>
+                    <div class="xs6 xm5 xb5">
+                        <div class="total_assets">{$Think.lang.ucenter_lvt_locked}: <span>{$locking_money}</span></div>
+                        <a href="/ExtractionMoney/index" class="btn-extracted">{$Think.lang.ucenter_apply_lvt}</a>
+                    </div>
+                </div>
+                <div class="line detail">
+                    <h3 class="detail_title">
+                        <span>{$Think.lang.ucenter_lvt_detail}</span>
+                    </h3>
+                    <div class="detail_tab">
+                        <div class="detail_tab_header">
+                            <a href="javascript:;" class="active">{$Think.lang.ucenter_lvt_record_withdraw}</a>
+                            <a href="javascript:;">{$Think.lang.ucenter_lvt_record_purchase}</a>
+                        </div>
+                        <!--提币记录-->
+                        <div class="text-center detail_tab_con" style="display:block">
+                            <div class="table-responsive">
+                                <table class="table detail_record_table">
+                                    <thead>
+                                        <tr>
+                                            <th>{$Think.lang.ucenter_lvt_widthdraw_time}</th>
+                                            <th>{$Think.lang.ucenter_lvt_widthdraw_amount}(LVT)</th>
+                                            <th>{$Think.lang.ucenter_lvt_widthdraw_fee}(LVT)</th>
+                                            <th>{$Think.lang.ucenter_lvt_arrival}(LVT)</th>
+                                            <th>{$Think.lang.ucenter_lvt_status}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <foreach  name="data_extraction" item="each_extraction" key="ek">
+                                            <tr>
+                                                <td>{$each_extraction.create_at}</td>
+                                                <td>{$each_extraction.lvt_num}</td>
+                                                <td>{$each_extraction.charge}</td>
+                                                <td>{$each_extraction.fact_num}</td>
+                                                <td>
+                                                    <span class="record_extracting">
+                                                    <if condition="$each_extraction.status eq 1">
+                                                        {$Think.lang.ucenter_lvt_widthdraw_process}
+                                                    <elseif condition="$each_extraction.status eq 2"/>
+                                                        {$Think.lang.ucenter_lvt_widthdraw_success}
+                                                    <else/>
+                                                        {$Think.lang.ucenter_lvt_widthdraw_fail}
+                                                    </if>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </foreach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--转账记录-->
+                        <div class="text-center detail_tab_con">
+                            <div class="table-responsive">
+                                <table class="table detail_record_table">
+                                    <thead>
+                                        <tr>
+                                            <th>{$Think.lang.ucenter_lvt_purchase_time}</th>
+                                            <th>{$Think.lang.ucenter_lvt_transfer_address}</th>
+                                            <th>{$Think.lang.ucenter_lvt_purchase_amount}(ETH)</th>
+                                            <th>{$Think.lang.ucenter_lvt_obtained}(LVT)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <foreach  name="data_record" item="each_record" key="rk">
+                                            <tr>
+                                                <td>{$each_record.create_at}</td>
+                                                <td>{$each_record.yt_address}</td>
+                                                <td>{$each_record.eth_num}</td>
+                                                <td>{$each_record.lvt_num}</td>
+                                            </tr>
+                                        </foreach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <!-- endbuild -->
+    
+</body>
+</html>

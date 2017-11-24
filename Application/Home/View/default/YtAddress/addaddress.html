@@ -1,0 +1,57 @@
+<include file="Public/header"/>
+</div>
+    <div class="container wrap_ucenter">
+        <div class="line clearfix">
+            <div class="xs12 xm3 xb3 layout_left">
+                <div class="layout_left_menu">
+                    <span class="icon-list-ul"></span>
+                </div>
+                <div class="layout_left_con">
+                    <h2>{$Think.lang.ucenter_personal}</h2>
+                    <ul>
+                        <li><a href="/Ucenter/index">{$Think.lang.ucenter_left_one}</a></li>
+                        <li><a href="/LvtManage/index">{$Think.lang.ucenter_left_two}</a></li>
+                        <li><a href="/YtAddress/index" class="active">{$Think.lang.ucenter_left_thr}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xs12 xm9 xb9 layout_right">
+                <h2 class="revise_title">{$Think.lang.ucenter_add_address}</h2>
+                <form method="post" action="__SELF__">
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="username">{$Think.lang.ucenter_address_name}</label>
+                        </div>
+                        <div class="field">
+                            <div class="input-group input-second">
+                             <input type="text" class="input input-pass" name="eth_name" placeholder="{$Think.lang.ucenter_address_name_place}" data-validate="{$Think.lang.login_text}" maxlength="30" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                                <label for="username">{$Think.lang.ucenter_address}</label>
+                            </div>
+                        <div class="field">
+                            <div class="input-group input-second">
+                                <input type="text" class="input input-pass" name="address" placeholder="{$Think.lang.ucenter_address_place}" data-validate="{$Think.lang.subscription_info_no_zw}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gs-error">{$address_error}</div>
+                    <button type="submit" class="button bg-main radius-none button-block text-center btn btn-log">{$Think.lang.text_submit}</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <!-- endbuild -->
+    
+</body>
+</html>

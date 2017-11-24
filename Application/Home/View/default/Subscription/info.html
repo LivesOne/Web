@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.index_index_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/index.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/jquery.countdown.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/ys.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="layout">
+        <div class="header layout fixed-top fixed-top-bg">
+            <div class="container clearfix">
+                <div class="float-left">
+                    <img src="__STATIC__/assets/images/logo1.png" class="img-responsive logo" alt="">
+                </div>
+                <div class="float-right">
+                    <button class="button icon-navicon btn-index float-right" data-target="#nav-link2">
+                    </button>
+                    <ul class="nav nav-menu nav-inline nav-right nav-navicon" id="nav-link2">
+                        <li><a href="/">{$Think.lang.index_nav_1}</a> </li>
+                        <li><a href="/construction/index">{$Think.lang.index_nav_2}</a> </li>
+                        <li>
+                            <if condition="$lang eq 'en-us'">
+                                <a href="__PATADATA__/Symbiosism Chain And LVT Whitepaper.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            <else/>
+                                <a href="__PATADATA__/lvt 认购协议中文版.pdf" target="_blank">{$Think.lang.index_nav_3}</a>
+                            </if>
+                        </li>
+                        <li class="active"><a href="/subscription/index">{$Think.lang.index_nav_4}</a></li>
+                        <li>
+                            <if condition="$username eq ''">
+                                <a href="/user/login">{$Think.lang.text_login}</a>
+                            <else/>
+                                <a href="/Ucenter/index">{$username}</a><a href="/user/logout" id="logout">[{$Think.lang.text_signout}]</a>
+                            </if>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout ys_layout ys_h">
+        <div class="container">
+            <div class="line">
+                <div class="rgsignup ys_form">
+                    <div class="supply_title">{$Think.lang.subscription_info_info}</div>
+                    <form method="post" action="__SELF__">
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="username">{$Think.lang.text_info_mobile}</label>
+                            </div>
+                            <div class="field">
+                                <div class="input-group">
+                                    <input type="text" class="input" id="mobile" disabled="disabled" value="{$mobile}" />
+                                </div>
+                                <div class="ys_account_wrap">*{$Think.lang.subscription_info_noup}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="username">{$Think.lang.text_info_name}</label>
+                            </div>
+                            <div class="field">
+                                <div class="input-group">
+                                    <input type="text" class="input" name="user_name" data-validate="{$Think.lang.text_must}" placeholder="{$Think.lang.text_info_name}" value="{$real_name}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="username">{$Think.lang.text_info_email}</label>
+                            </div>
+                            <div class="field">
+                                <div class="input-group">
+                                    <input type="email" class="input rg-email" name="user_email" data-validate="{$Think.lang.text_email_option}" placeholder="{$Think.lang.text_info_email}" value="{$email}" />
+                                    <div class="gs-error">{$error_email}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-package">
+                            <div class="label">
+                                <label for="username">{$Think.lang.subscription_info_address}</label>
+                            </div>
+                            <div class="field">
+                                <div class="input-group">
+                                    <if condition="$address_list neq ''">
+                                        <foreach  name="address_list" item="_list" key="key">
+                                            <div class="form-group">
+                                                <div class="field">
+                                                    <div class="input-group">
+                                                        <input type="text" class="input" placeholder="{$Think.lang.subscription_info_address_many}" value="{$_list.address}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </foreach>
+                                    <else/>
+                                        <input type="text" name="user_address[]" class="input" data-validate="{$Think.lang.subscription_info_no_zw}" placeholder="{$Think.lang.subscription_info_address_many}" value="" />
+                                    </if>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gs-error package-error">{$error_address}</div>
+                        <!-- <div class="text-center check-error package-error">{$Think.lang.subscription_info_address_num}</div> -->
+                        <div class="protocol">
+                            <if condition="$count_address lt 3">
+                                <span class="float-right add-package"><i class="add"></i>{$Think.lang.subscription_info_add_address}
+                                </span>
+                            </if>
+                        </div>
+                        <button type="submit" class="button bg-main radius-none button-block text-center btn btn-sure">{$Think.lang.text_submit}</button>
+<!--                         <div class="text-center check-error buy-error">{$error}</div>
+ -->                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout text-center layout-footer">
+        {$Think.lang.text_jijin}
+    </div>
+    <!-- build:js js/page_index.js -->
+    <script src="__STATIC__/assets/jsmin/jquery.js"></script>
+    <script src="__STATIC__/assets/jsmin/jquery.cookie.js"></script>
+    <script src="__STATIC__/assets/jsmin/sha3.js"></script>
+    <script src="__STATIC__/assets/jsmin/pintuer.js"></script>
+    <script src="__STATIC__/assets/jsmin/respond.js"></script>
+    <!-- endbuild -->
+    <script src="__STATIC__/assets/jsmin/jquery.countdown.js"></script>
+    <script src="__STATIC__/assets/jsmin/clipboard.min.js"></script>
+    <script src="__STATIC__/assets/jsmin/ys.js"></script>
+    <script>
+        $(function() {
+            var i = {$count_address};
+            $(".add-package").click(function(event) {
+                /* Act on the event */
+                
+                if (i < 4) {
+                    //$(".protocol").before($(".form-package .field").eq(0).clone(true, true));
+                    var packagestr = "";
+                    i++;
+                    if (i == 3) {
+                        $(this).remove();
+                        $(this).off();
+                        packagestr += '<div class="form-group"><div class="field"><div class="input-group"><input type="text" class="input" name="user_address[]" data-validate="{$Think.lang.subscription_info_no_zwrq}" placeholder="{$Think.lang.subscription_info_address_many}" /></div></div></div>';
+                        $(".package-error").before(packagestr);
+                    } else {
+                        packagestr += '<div class="form-group"><div class="field"><div class="input-group"><input type="text" class="input" name="user_address[]" data-validate="{$Think.lang.subscription_info_no_zwrq}" placeholder="{$Think.lang.subscription_info_address_many}" /></div></div></div>';
+                        $(".package-error").before(packagestr);
+                    }
+                } else {
+                    //$(".package-error").show();
+                    $(this).remove();
+                    $(this).off();
+                }
+            });
+        })
+    </script>
+</body>
+</html>

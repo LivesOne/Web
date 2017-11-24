@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.protocol_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="container">
+        <div class="line protocol-suc">
+            <div class="text-center protocol-title">{$Think.lang.protocol_fund}</div>
+            <if condition="$lang eq 'en-us'">
+                <div class="protocol-content">
+                <p>
+                    <span style="font-size: 24.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">LVT Sale: Terms and Conditions</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Last Updated: Sept 7, 2017</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">TERMS OF TOKEN SALE</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">PLEASE READ THESE TERMS OF TOKEN SALE THOROUGHLY AND CAREFULLY. IF
+                YOU DO NOT AGREE TO THESE TERMS OF SALE, DO NOT PURCHASE TOKENS.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Your purchase of LivesToken (</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">“LVT”</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">) during the LVT sale period from Symbiosism
+                Foundation is subject to these Terms of Sale. Each of you and Company is a </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">“Party”</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">, and
+                together the </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">“Parties”</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">By purchasing LVT from us during the Sale Period and/or using LVT in connection with the
+                Platform (as defined below), you will be bound by these Terms and all terms incorporated
+                by reference. If you have any questions regarding these Terms, please contact us at
+                Livestoken@lives.one.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">You and Company agree as follows:</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Purpose and Use of LVT in Connection with the Platform</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">LVT are intended to be used to reward users for their quantified behaviors in the process
+                of using the Internet, and derived transactions and services (the “</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Services</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">”), as facilitated
+                through a decentralized platform that Company and its affiliates are developing (the
+                “</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Platform</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">”).</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Ownership of LVT carries no rights, express or implied, other than the right to use LVT as
+                a means to obtain Services, and to enable usage of and interaction with the Platform, if
+                successfully completed and deployed. In particular, you understand and accept that LVT
+                do not represent or confer any ownership right or stake, share or security or equivalent
+                rights, or any right to receive future revenue shares, intellectual property rights or any
+                other form of participation in or relating to the Platform, and/or Company and its corporate
+                affiliates, other than rights relating to the receipt of Services and use of the Platform,
+                subject to limitations and conditions in these Terms and applicable Platform Terms and
+                Policies (as defined below). LVT are not intended to be a digital currency, security,
+                commodity or any other kind of financial instrument.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Scope of Terms</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Unless otherwise stated herein, these Terms govern only your purchase of LVT from us
+                during the Sale Period.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The use of LVT in connection with the Services or Platform may be governed by other
+                applicable terms and policies. Any Platform Terms and Policies we published will be
+                available at http://www.lives.one/. We may add terms or policies to the Platform Terms and
+                Policies in our sole discretion, and may update each of the Platform Terms and Policies
+                from time to time according to modification procedures set forth therein. To the extent of
+                any conflict with these Terms, the Platform Terms and Policies shall control with respect to
+                any issues relating to the use of LVT in connection with the Services or Platform.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Cancellation; Refusal of Purchase Requests</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Your purchase of LVT from us during the Sale Period is final, and there are no refunds or
+                cancellations except (a) if the Activation Threshold is not reached, pursuant to applicable
+                procedures set forth in </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit A </span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">or (b) as may be required by applicable law or
+                regulation. We reserve the right to refuse or cancel LVT purchase requests at any time in
+                our sole discretion.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">LVT Sale Procedures and Specifications</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Important information about the procedures and material specifications of our LVT sale is
+                provided in </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit A</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">, including, but not limited to, details regarding the timing and pricing
+                of the LVT sale, the amount of LVT we will sell, and our anticipated use of the LVT sale
+                proceeds. By purchasing LVT, you acknowledge that you understand and have no
+                objection to these procedures and material specifications.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Acknowledgment and Assumption of Risks</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">You acknowledge and agree that there are risks associated with purchasing LVT, holding
+                LVT, and using LVT in connection with the Services and Platform, as disclosed and
+                explained in </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit B</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">. If you have any questions regarding these risks, please contact us
+                at Livestoken@lives.one. BY PURCHASING LVT, YOU EXPRESSLY ACKNOWLEDGE
+                AND ASSUME THESE RISKS.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Security</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">You are responsible for implementing reasonable measures for securing the wallet, vault
+                or other storage mechanism you use to receive and hold LVT you purchase from us,
+                including any requisite private key(s) or other credentials necessary to access such
+                storage mechanism(s). If your private key(s) or other access credentials are lost, you
+                may lose access to your LVT. We are not responsible for any such losses.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Personal Information</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">We may determine, in our sole discretion, that it is necessary to obtain certain information
+                about you in order to comply with applicable law or regulation in connection with selling
+                LVT to you. You agree to provide us such information promptly upon request, and you
+                acknowledge that we may refuse to sell LVT to you until you provide such requested
+                information and we have determined that it is permissible to sell you LVT under applicable
+                law or regulation.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Taxes</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The purchase price that you pay for LVT is exclusive of all applicable taxes. You are
+                responsible for determining what, if any, taxes apply to your purchase of LVT, including, for
+                example, sales, use, value added, and similar taxes. It is also your responsibility to
+                withhold, collect, report and remit the correct taxes to the appropriate tax authorities. We
+                are not responsible for withholding, collecting, reporting, or remitting any sales, use, value
+                added, or similar tax arising from your purchase of LVT.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Representations and Warranties<br/></span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">By transferring Ether to the smart contract system (“</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Smart Contract System</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">”, as</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">explained in </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit A</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">) to purchase LVT from us, you represent and warrant that:</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You have read and understand these Terms;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You have a sufficient understanding of the functionality, usage, storage, transmission
+                mechanisms and other material characteristics of cryptographic tokens like Bitcoin and
+                Ether, token storage mechanisms (such as token wallets), blockchain technology and
+                blockchain-based software systems to understand these Terms and to appreciate the
+                risks and implications of purchasing LVT;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You have obtained sufficient information about LVT to make an informed decision to
+                purchase LVT;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You understand the restrictions and risks associated with the creation of LVT by the
+                Smart Contract System as set forth herein, and acknowledge and assume all such risks;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You understand that LVT confer only the right to receive Services and to access the
+                Platform, and confer no other rights of any form with respect to the Platform or Company
+                or its corporate affiliates, including, but not limited to, any voting, distribution, redemption,
+                liquidation, proprietary (including all forms of intellectual property), or other financial or
+                legal rights;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You are purchasing LVT solely for the purpose of receiving Services, accessing the
+                Platform, and supporting the development, testing, deployment and operation of the
+                Platform, being aware of the commercial risks associated with the Company and the
+                Platform. You are not purchasing LVT for any other purposes, including, but not limited to,
+                any investment, speculative or other financial purposes;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--Your purchase of LVT complies with applicable law and regulation in your jurisdiction,
+                including, but not limited to, (i) legal capacity and any other applicable legal requirements
+                in your jurisdiction for purchasing LVT, using LVT, and entering into contracts with us, (ii)
+                any foreign exchange or regulatory restrictions applicable to such purchase, and (iii) any
+                governmental or other consents that may need to be obtained;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You will comply with any applicable tax obligations in your jurisdiction arising from your
+                purchase of LVT;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--If you are purchasing LVT on behalf of any entity, you are authorized to accept these
+                Terms on such entity’s behalf and that such entity will be responsible for breach of these
+                Terms by you or any other employee or agent of such entity (references to “you” in these
+                Terms refer to you and such entity, jointly);</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You are not resident or domiciled in U.S. or purchasing LVT from a location in U.S.;</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--You understand and acknowledge that title to, and risk of loss of, LVT you purchase from
+                Company and receive from the Smart Contract System passes from Company to you.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Indemnification</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">--To the fullest extent permitted by applicable law, you will indemnify, defend and hold
+                harmless Company and our respective past, present and future employees, officers,
+                directors, contractors, consultants, equity holders, suppliers, vendors, service providers,
+                parent companies, subsidiaries, affiliates, agents, representatives, predecessors,
+                successors and assigns (the “</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Company Parties</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">”) from and against all claims, demands,
+                actions, damages, losses, costs and expenses (including attorneys’ fees) that arise from
+                or relate to: (i) your purchase or use of LVT, (ii) your responsibilities or obligations under
+                these Terms, (iii) your violation of these Terms, or (iv) your violation of any rights of any
+                other person or entity.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Disclaimers</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW AND EXCEPT AS
+                OTHERWISE SPECIFIED IN A WRITING BY US, (A) LVT ARE SOLD ON AN “AS IS”
+                AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OF ANY KIND, AND WE
+                EXPRESSLY DISCLAIM ALL IMPLIED WARRANTIES AS TO LVT, INCLUDING,
+                WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+                FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT; (B) WE DO NOT
+                REPRESENT OR WARRANT THAT LVT ARE RELIABLE, CURRENT OR ERROR-FREE,
+                MEET YOUR REQUIREMENTS, OR THAT DEFECTS IN LVT WILL BE CORRECTED;
+                AND (C) WE CANNOT AND DO NOT REPRESENT OR WARRANT THAT LVT OR THE
+                DELIVERY MECHANISM FOR LVT ARE FREE OF VIRUSES OR OTHER HARMFUL
+                COMPONENTS.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Some jurisdictions do not allow the exclusion of certain warranties or disclaimer of implied
+                terms in contracts with consumers, so some or all of the exclusions of warranties and
+                disclaimers in this section may not apply to you.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Limitation of Liability</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">(A) TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW: (I) IN NO EVENT
+                WILL COMPANY OR ANY OF THE COMPANY PARTIES BE LIABLE FOR ANY
+                INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES
+                OF ANY KIND (INCLUDING, BUT NOT LIMITED TO, WHERE RELATED TO LOSS OF
+                REVENUE, INCOME OR PROFITS, LOSS OF USE OR DATA, OR DAMAGES FOR
+                BUSINESS INTERRUPTION) ARISING OUT OF OR IN ANY WAY RELATED TO THE
+                SALE OR USE OF LVT OR OTHERWISE RELATED TO THESE TERMS, REGARDLESS
+                OF THE FORM OF ACTION, WHETHER BASED IN CONTRACT, TORT (INCLUDING,
+                BUT NOT LIMITED TO, SIMPLE NEGLIGENCE, WHETHER ACTIVE, PASSIVE OR
+                IMPUTED), OR ANY OTHER LEGAL OR EQUITABLE THEORY (EVEN IF THE PARTY</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND REGARDLESS
+                OF WHETHER SUCH DAMAGES WERE FORESEEABLE); AND (II) IN NO EVENT WILL
+                THE AGGREGATE LIABILITY OF COMPANY AND THE COMPANY PARTIES (JOINTLY),
+                WHETHER IN CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE,
+                WHETHER ACTIVE, PASSIVE OR IMPUTED), OR OTHER THEORY, ARISING OUT OF
+                OR RELATING TO THESE TERMS OR THE USE OF OR INABILITY TO USE LVT,
+                EXCEED THE AMOUNT YOU PAY TO US FOR LVT.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">(B) Some jurisdictions do not allow the limitation or exclusion of liability for incidental or
+                consequential damages. Accordingly, some of the limitations of this section may not apply
+                to you.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Release</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">To the fullest extent permitted by applicable law, you release Company and the other
+                Company Parties from responsibility, liability, claims, demands and/or damages (actual
+                and consequential) of every kind and nature, known and unknown (including, but not
+                limited to, claims of negligence), arising out of or related to disputes between users and
+                the acts or omissions of third parties.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Severability</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">If any term, clause or provision of these Terms is held unlawful, void or unenforceable,
+                then that term, clause or provision will be severable from these Terms and will not affect
+                the validity or enforceability of any remaining part of that term, clause or provision, or any
+                other term, clause or provision of these Terms.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Miscellaneous</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">These Terms constitute the entire agreement between you and us relating to your
+                purchase of LVT from us. We may make changes to these Terms from time to time as
+                reasonably required to comply with applicable law or regulation. If we make changes, we
+                will post the amended Terms at http://www.lives.one. The amended Terms will be effective
+                immediately. We may assign our rights and obligations under these Terms. Our failure to
+                exercise or enforce any right or provision of these Terms will not operate as a waiver of
+                such right or provision. We will not be liable for any delay or failure to perform any
+                obligation under these Terms where the delay or failure results from any cause beyond
+                our reasonable control. Purchasing LVT from us does not create any form of partnership,
+                joint venture or any other similar relationship between you and us. Except as otherwise
+                provided in herein, these Terms are intended solely for the benefit of you and us and are
+                not intended to confer third-party beneficiary rights upon any other person or entity. You
+                agree and acknowledge that all agreements, notices, disclosures, and other
+                communications that we provide to you, including these Terms, will be provided in
+                electronic form.</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit A<br/>Token Sale Procedures and Specifications</span>
+                </p>
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Total Number of LVT to be Created and Sold</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">LivesToken(LVT) issued a total of 1 billion token, and the total private placement issue
+                number will be 100 million LivesToken(LVT), accounting for 10% of LivesToken (LVT) total
+                circulation. The minimum threshold of the private placement is 20ETH, and no more than
+                500ETH. The holding LivesToken will have a lockout period of six months, each month
+                one-sixth of the holding token will be unlocked.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">LVT Price (Private placement phase)</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The Private Placement of LivesToken(LVT) is open only to specific investors at a price of
+                1ETH </span><span style="font-size: 10.000000pt; font-family: &#39;SimSun&#39;">≧ </span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">9333 LVT.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Procedures for Buying and Receiving LVT</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">In order to purchase LVT during the Sale Period, and to receive the LVT you purchase,
+                you must have an Ethereum wallet that supports the ERC20 token standard. Company
+                reserves the right to prescribe additional wallet requirements.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Prior to the commencement of the Sale Period, Company will publish an address for the
+                LVT sale via http://www.lives.one. To initiate a purchase of LVT during the Sale Period,
+                you must send an amount of Ether to an Ethereum address (the “LivesToken Address”)
+                that will be provided to you only after you agree to these Terms. Sending Ether to the
+                LivesToken Address during the Sale Period triggers a smart contract operation, pursuant
+                to which the Smart Contract System will automatically create and promptly deliver the
+                corresponding LVT to the ERC20 wallet address from which the Ether were sent.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Ether must be sent to the LivesToken Address during the Sale Period in order to purchase
+                and receive LVT. Sending Ether to any other address may result in loss of
+                Ether. Attempted transactions to purchase LVT will be rejected if Ether is sent to the
+                LivesToken Address at any time before or after the Sale Period.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Use of Proceeds from LVT Token Sale</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The Ether that Company receives for LVT sold to purchasers during the Sale Period, will
+                be used to compensate engineers, staff and contractors, cover operating costs and
+                marketing expenses, legal compliance fees for private placement, recruitment of new
+                team members, and to address other administrative and unforeseen costs.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit B</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Certain Risks Relating to Purchase, Sale and Use of LVT</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Important Note: </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-style: italic">As noted elsewhere in these Terms, the LVT are not being structured or
+                sold as securities or any other form of investment product. Accordingly, none of the
+                information presented in this </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Exhibit B </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-style: italic">is intended to form the basis for any investment
+                decision, and no specific recommendations are intended. Company expressly disclaims
+                any and all responsibility for any direct or consequential loss or damage of any kind
+                whatsoever arising directly or indirectly from: (i) reliance on any information contained in
+                this </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Exhibit B</span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-style: italic">, (ii) any error, omission or inaccuracy in any such information or (iii) any
+                action resulting from such information.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">By purchasing, holding and using LVT, you expressly acknowledge and assume the
+                following risks:</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Losing Access to LVT Due to Loss of Private Key(s), Custodial Error or
+                Purchaser Error</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">A private key, or a combination of private keys, is necessary to control and dispose of LVT
+                stored in your digital wallet or vault. Accordingly, loss of requisite private key(s) associated
+                with your digital wallet or vault storing LVT will result in loss of such LVT. Moreover, any
+                third party that gains access to such private key(s), including by gaining access to login
+                credentials of a digital wallet or vault service you use, may be able to misappropriate your
+                LVT. Any errors or malfunctions caused by or otherwise related to the digital wallet or vault
+                you choose to receive and store LVT, including your own failure to properly maintain or
+                use such digital wallet or vault, may also result in the loss of your LVT.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risks Associated with the Ethereum Protocol</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Because LVT and the Platform are based on the Ethereum protocol, any malfunction,
+                breakdown or abandonment of the Ethereum protocol may have a material adverse effect
+                on the Platform or LVT. Moreover, advances in cryptography, or technical advances such
+                as the development of quantum computing, could present risks to LVT and the Platform,
+                including the utility of LVT for obtaining Services, by rendering ineffective the
+                cryptographic consensus mechanism that underpins the Ethereum protocol.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Mining Attacks</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">As with other decentralized cryptographic tokens based on the Ethereum protocol, LVT
+                are susceptible to attacks by miners in the course of validating LVT transactions on the
+                Ethereum blockchain, including, but not limited, to double-spend attacks, majority mining
+                power attacks, and selfish-mining attacks. Any successful attacks present a risk to the
+                Platform and LVT, including, but not limited to, accurate execution and recording of
+                transactions involving LVT.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Hacking and Security Weaknesses</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Hackers or other malicious groups or organizations may attempt to interfere with the
+                Platform or LVT in a variety of ways, including, but not limited to, malware attacks, denial
+                of service attacks, consensus-based attacks, Sybil attacks, smurfing and
+                spoofing. Furthermore, because the Platform is based on open-source software, there is a
+                risk that a third party or a member of the Company team may intentionally or
+                unintentionally introduce weaknesses into the core infrastructure of the Platform, which
+                could negatively affect the Platform and LVT, including LVT’s utility for obtaining Services.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risks Associated with Markets for LVT</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">LVT are intended to be used solely on the Platform, and Company will not support or
+                otherwise facilitate any secondary trading or external valuation of LVT. This restricts the
+                contemplated avenues for using LVT to obtain Services or access the Platform, and could
+                therefore create illiquidity risk with respect to LVT you hold. Even if secondary trading of
+                LVT is facilitated by third party exchanges, such exchanges may be relatively new and
+                subject to little or no regulatory oversight, making them more susceptible to
+                market-related risks. Furthermore, to the extent that third-parties do ascribe an external
+                exchange value to LVT, such value may be extremely volatile and diminish to zero.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Uninsured Losses</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Unlike bank accounts or accounts at some other financial institutions, LVT are uninsured
+                unless you specifically obtain private insurance to insure them. Thus, in the event of loss
+                or loss of utility value, there is no public insurer or private insurance arranged by us, to
+                offer recourse to you.</span>
+                </p>
+               
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risks Associated with Uncertain Regulations and Enforcement Actions</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The regulatory status of LVT and distributed ledger technology is unclear or unsettled in
+                many jurisdictions. It is difficult to predict how or whether regulatory agencies may apply
+                existing regulation with respect to such technology and its applications. It is likewise
+                difficult to predict how or whether legislatures or regulatory agencies may implement
+                changes to law and regulation affecting distributed ledger technology and its applications,
+                including the Platform and LVT. Regulatory actions could negatively impact the Platform
+                and LVT in various ways, including, for purposes of illustration only, through a
+                determination that LVT are a regulated financial instrument that require registration or
+                licensing. Company may cease operations in a jurisdiction in the event that regulatory
+                actions, or changes to law or regulation, make it illegal to operate in such jurisdiction, or
+                commercially undesirable to obtain the necessary regulatory approval(s) to operate in
+                such jurisdiction.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risks Arising from Taxation</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The tax characterization of LVT is uncertain. You must seek your own tax advice in
+                connection with purchasing LVT, which may result in adverse tax consequences to you,
+                including withholding taxes, income taxes and tax reporting requirements.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Alternative Platforms</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">It is possible that alternative platforms could be established that utilize the same open
+                source code and protocol underlying the Platform and attempt to facilitate services that
+                are materially similar to the Services. The Platform may compete with these alternative
+                platforms, which could negatively impact the Platform and LVT, including LVT’s utility for
+                obtaining Services.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of Insufficient Interest in the Platform or Distributed Applications</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">It is possible that the Platform will not be used by a large number of individuals,
+                companies and other entities or that there will be limited public interest in the creation and
+                development of distributed platforms (such as the Platform) more generally. Such a lack of
+                use or interest could negatively impact the development of the Platform and the potential
+                utility of LVT, including its utility for obtaining Services.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risk of an Unfavorable Fluctuation of Ether and Other Currency Value</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">The Company team intends to use the proceeds from selling LVT to fund the maintenance
+                and development of the Platform. The proceeds of the sale of LVT will be denominated in
+                Ether, and may, at our discretion, be converted into other cryptographic and fiat currencies.
+                If the value of Ether or other currencies fluctuates unfavorably during or after the Sale
+                Period, the Company team may not be able to fund development, or may not be able to
+                develop or maintain the Platform in the manner that it intended.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Risks Arising from Lack of Governance Rights</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Because LVT confer no governance rights of any kind with respect to the Platform or
+                Company, all decisions involving the Platform or Company will be made by Company at its
+                sole discretion, including, but not limited to, decisions to discontinue the Platform, to sell
+                more LVT for use in the Platform, or to sell or liquidate the Company. These decisions
+                could adversely affect the Platform and the utility of LVT that you hold, including LVT’s
+                utility for obtaining Services.</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700; font-style: italic">Unanticipated Risks</span>
+                </p>
+                
+                <p>
+                    <span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">Cryptographic tokens such as LVT are a new and untested technology. In addition to the
+                risks included in this </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit B</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">, there are other risks associated with your purchase,
+                holding and use of LVT, including those that the Company cannot anticipate. Such risks
+                may further materialize as unanticipated variations or combinations of the risks discussed
+                in this </span><span style="font-size: 10.000000pt; font-family: &#39;Arial&#39;; font-weight: 700">Exhibit B</span><span style="font-size: 10.000000pt; font-family: &#39;ArialMT&#39;">.&nbsp;</span>
+                </p>
+                
+                <p>
+                    <br/>
+                </p>
+            </div>
+            <else/>
+                <div class="protocol-content">
+                <p class="p1">
+                    <span class="s1"><strong>LVT</strong></span><span class="s2"><strong>认购协议</strong></span>
+                </p>
+                <p class="p2">
+                    <span class="s3"></span><br/>
+                </p>
+                <p class="p3">
+                    <span class="s3">最后更新：</span><span class="s1">2017</span><span class="s3">年</span><span class="s1">8</span><span class="s3">月</span><span class="s1">29</span><span class="s3">日</span>
+                </p>
+                <p class="p4">
+                    <span class="s1"><strong>LVT</strong></span><span class="s2"><strong>销售条款</strong></span>
+                </p>
+                <p class="p5">
+                    <span class="s3">请仔细阅读此销售条款。</span><span class="s1"> </span><span class="s3">如果您不同意这些销售条款，请勿购买</span><span class="s1">LVT</span><span class="s3">。</span>
+                </p>
+                <p class="p5">
+                    <span class="s3">在共生基金会的</span><span class="s1">LVT</span><span class="s3">销售期间，您购买的</span><span class="s1">LivesToken</span><span class="s3">（</span><span class="s1">LVT</span><span class="s3">）受制于这些销售条款。个人和组织作为独立个体受制于</span><span class="s1">“</span><span class="s3">缔约方</span><span class="s1">”</span><span class="s3">。</span>
+                </p>
+                <p class="p3">
+                    <span class="s3">通过在销售期间购买</span><span class="s1">LVT</span><span class="s3">或使用与平台相关的</span><span class="s1">LVT</span><span class="s3">（如下所述），您将受这些条款的约束。如果您对这些条款有任何疑问，请通过</span><span class="s1">Token@lives.one</span><span class="s3">与我们联系。</span>
+                </p>
+                <p class="p6">
+                    <span class="s1"><strong>LVT</strong></span><span class="s2"><strong>与平台的目的和使用</strong></span>
+                </p>
+                <p class="p7">
+                    <span class="s1">LVT</span><span class="s3">旨在通过公司及其附属公司正在开发的去中心化平台来量化用户在使用互联网中的行为并给予相应的奖励，同时也可应用于相关交易和服务过程中。</span>
+                </p>
+                <p class="p3">
+                    <span class="s1">LVT</span><span class="s3">的所有权不得使用</span><span class="s1">LVT</span><span class="s3">作为获取服务的手段的权利，以及启用平台使用和交互的权利。</span><span class="s1"> </span><span class="s3">特别是，您理解并接受</span><span class="s1">LVT</span><span class="s3">不代表或授予任何所有权或利益，股份或担保或同等权利，或任何获得未来收入份额，知识产权或任何其他形式参与或与之相关的权利、平台或公司及其公司附属公司，除了收到服务和使用平台的权利以外，受本条款的限制和条件以及适用的平台条款和政策（如下所定义）。</span><span class="s1">LVT</span><span class="s3">不是证券，商品或任何其他类型的金融工具。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>条款范围</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">除非另有说明，本条款仅适用于您在销售期间购买我们的</span><span class="s1">LVT</span><span class="s3">。</span>
+                </p>
+                <p class="p3">
+                    <span class="s3">与服务或平台相关的</span><span class="s1">LVT</span><span class="s3">的使用可能受其他适用条款和政策的约束。我们发布的任何平台条款和政策将在</span><span class="s1">http://www.lives.one/</span><span class="s3">上获得。我们可以酌情对平台条款和政策添加条款或政策，并可根据其中规定的修改程序不时更新</span><span class="s1">“</span><span class="s3">平台条款和策略</span><span class="s1">”</span><span class="s3">。在与本条款有任何冲突的情况下，</span><span class="s1">“</span><span class="s3">平台条款和政策</span><span class="s1">”</span><span class="s3">将对与服务或平台相关的使用</span><span class="s1">LVT</span><span class="s3">有关的任何问题进行控制。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>取消</strong></span><span class="s1"><strong>; </strong></span><span class="s2"><strong>拒绝采购申请</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">您在销售期间从我们购买</span><span class="s1">LVT</span><span class="s3">是最终的。</span><span class="s1"> </span><span class="s3">我们保留随时自行拒绝或取消</span><span class="s1">LVT</span><span class="s3">购买请求的权利。</span>
+                </p>
+                <p class="p6">
+                    <span class="s1"><strong>LVT</strong></span><span class="s2"><strong>销售程序和规格</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">关于</span><span class="s1">LVT</span><span class="s3">销售的程序和材料规格的重要信息在附件</span><span class="s1">A</span><span class="s3">中提供，包括但不限于有关</span><span class="s1">LVT</span><span class="s3">销售的时间和价格、我们将销售的</span><span class="s1">LVT</span><span class="s3">的数量、我们预期使用的</span><span class="s1">LVT</span><span class="s3">的详细信息和</span><span class="s1">LVT</span><span class="s3">销售收入。通过采购</span><span class="s1">LVT</span><span class="s3">，了解并且不反对这些程序和材料规格。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>确认和假设风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">您承认并同意，与购买</span><span class="s1">LVT</span><span class="s3">，持有</span><span class="s1">LVT</span><span class="s3">以及使用</span><span class="s1">LVT</span><span class="s3">有关的风险。如果您对这些风险有任何疑问，请联系</span><span class="s1">Token @lives.one</span><span class="s3">。采购</span><span class="s1">LVT</span><span class="s3">过程中，您明确承认并愿意承担这些风险。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>安全</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">您需要采取合理的措施，确保您使用的钱包、金库或其他存储机制可以接收和保存您从我们这里购买的</span><span class="s1">LVT</span><span class="s3">，包括任何必要的私钥或其他必要的凭据，以便访问这种存储机制。如果您的私钥或其他访问凭据丢失，您可能会失去对</span><span class="s1">LVT</span><span class="s3">的访问权限。我们对此类损失概不负责。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>个人信息</strong></span>
+                </p>
+                <p class="p5">
+                    <span class="s3">我们可以自行决定是否有必要获得有关您的某些信息，以便遵守向您出售</span><span class="s1">LVT</span><span class="s3">相关的适用法律或法规。您同意根据要求及时向我们提供此类信息，并且您承认我们可能会在您提供此类请求的信息之前拒绝向您出售</span><span class="s1">LVT</span><span class="s3">，并且我们已经确定允许根据适用法律或法规向您出售</span><span class="s1">LVT</span><span class="s3">。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>税</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">您为</span><span class="s1">LVT</span><span class="s3">支付的购买价格不包括所有适用税金。</span><span class="s1"> </span><span class="s3">您有责任确定适用于您购买</span><span class="s1">LVT</span><span class="s3">的税收（如果有的话），包括销售，使用，增值税和类似税款。您也有责任向适当的税务机关扣留，收集，汇报和汇出正确的税款。我们不负责扣留，收集，报告或免除您购买</span><span class="s1">LVT</span><span class="s3">所产生的任何销售，使用，增值税或类似税款。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>陈述和保证</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">通过将</span><span class="s1">Ether</span><span class="s3">智能合约系统，从我们这里购买</span><span class="s1">LVT</span><span class="s3">，须声明并保证：</span>
+                </p>
+                <p class="p3">
+                    <span class="s1">- </span><span class="s3">您已阅读并理解这些条款</span><span class="s1">;</span>
+                </p>
+                <p class="p3">
+                    <span class="s1">- </span><span class="s3">您对</span><span class="s1">Bitcoin</span><span class="s3">和</span><span class="s1">Ether</span><span class="s3">等令牌存储机制（如令牌钱包），块链技术和基于块链的软件系统等功能，使用，存储，传输机制和其他材料特性有足够的了解，并了解购买</span><span class="s1">LVT</span><span class="s3">的风险和影响</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您获得了有关</span><span class="s1">LVT</span><span class="s3">的足够信息，作出明智的决定购买</span><span class="s1">LVT;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您了解本协议所规定的智能合同系统创建</span><span class="s1">LVT</span><span class="s3">的限制和风险，承认并承担所有此类风险</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您了解</span><span class="s1">LVT</span><span class="s3">仅授予接受服务和访问平台的权利，并且不对平台或公司或其公司附属公司（包括但不限于任何投票，分配）授予任何形式的其他权利，赎回，清算，专有（包括所有形式的知识产权）或其他财务或法律权利</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您正在购买</span><span class="s1">LVT</span><span class="s3">，仅用于接收服务，访问平台，并支持平台的开发，测试，部署和运营，了解与本公司和平台相关的商业风险。您不会为任何其他目的购买</span><span class="s1">LVT</span><span class="s3">，包括但不限于任何投资，投机或其他财务目的</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您购买的</span><span class="s1">LVT</span><span class="s3">符合您所在司法管辖区的适用法律法规，包括但不限于（</span><span class="s1">i</span><span class="s3">）法律行为能力以及您所在司法辖区内使用</span><span class="s1">LVT</span><span class="s3">并与我们订立合同的法律要求，（</span><span class="s1">ii</span><span class="s3">）适用于此类购买的任何外汇或监管限制，以及（</span><span class="s1">iii</span><span class="s3">）可能需要获得的任何政府或其他同意</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您将遵守您购买</span><span class="s1">LVT</span><span class="s3">所产生的任何适用的税务义务</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">如果您代表任何实体购买</span><span class="s1">LVT</span><span class="s3">，您有权代表该实体接受这些条款，并且您或该实体的任何其他雇员或代理人将对此类实体负责违反本条款（参考这些条款中的</span><span class="s1">“</span><span class="s3">你</span><span class="s1">”</span><span class="s3">是指你和这样的实体）</span><span class="s1">;</span>
+                </p>
+                <p class="p5">
+                    <span class="s1">- </span><span class="s3">您不是美国公民或在当地居住，或从美国某地购买</span><span class="s1">LVT</span><span class="s3">。</span>
+                </p>
+                <p class="p3">
+                    <span class="s1">- </span><span class="s3">您了解并确认您从公司购买的</span><span class="s1">LVT</span><span class="s3">的所有权和损失的风险，并从智能合同系统收到从公司转到您的身份。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>免责声明</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">在适用法律允许的最大范围内，除非我们以书面形式另有规定，（</span><span class="s1">A</span><span class="s3">）</span><span class="s1">LVT</span><span class="s3">以</span><span class="s1">“</span><span class="s3">原样</span><span class="s1">”</span><span class="s3">和</span><span class="s1">“</span><span class="s3">可用</span><span class="s1">”</span><span class="s3">的形式出售，不附有任何种类的担保，我们明确否认所有暗示的保证包括但不限于适销性，适用于特定用途，标题和非侵权的暗示保证</span><span class="s1">;</span><span class="s3">（</span><span class="s1">B</span><span class="s3">）我们不表示或保证</span><span class="s1">LVT</span><span class="s3">可靠，当前或无错误，符合您的要求，或</span><span class="s1">LVT</span><span class="s3">中的缺陷将被更正</span><span class="s1">; </span><span class="s3">和（</span><span class="s1">C</span><span class="s3">）我们不能也不表示或担保</span><span class="s1">LVT</span><span class="s3">或</span><span class="s1">LVT</span><span class="s3">的交付机制不会有病毒或其他有害组件。</span>
+                </p>
+                <p class="p3">
+                    <span class="s3">某些司法管辖区不允许在与消费者的合同中排除某些担保或免责隐含条款，因此本节中部分或全部免责声明和免责声明可能不适用于您。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>责任限制</strong></span>
+                </p>
+                <ol class="ol1 list-paddingleft-2">
+                    <li>
+                        <p>
+                            <span class="s4"><span class="Apple-tab-span">  </span>A.</span><span class="s3">在适用法律允许的最大范围内（</span><span class="s1">I</span><span class="s3">）在任何情况下将公司或公司方承担任何间接的、特殊的、附带的、或任何惩罚性的损害赔偿（包括但不限于，哪里的收入损失、收入或利润损失使用或数据，或损害赔偿相关的业务中断）或以任何方式出售或使用的</span><span class="s1">LVT</span><span class="s3">或这些条款另有相关而产生的，无论是行动的形式，无论是基于合同、侵权（包括但不限于，简单的疏忽，无论是主动、被动或估算），或任何其他法律或衡平理论（即使当事人已被告知此类损害的可能性，不管这种损害是可预见的）和（</span><span class="s1">II</span><span class="s3">）在任何情况下，公司和公司（合并），无论合同，保证，侵权（包括疏忽，无论被动，被动或被侵害）是否由于或相关而导致的任何合法责任或其他原因这些条款或使用或不能使用</span><span class="s1">LVT</span><span class="s3">，超过您支付给</span><span class="s1">LVT</span><span class="s3">的金额。</span>
+                        </p>
+                    </li>
+                </ol>
+                <p class="p8">
+                    <span class="s3">（</span><span class="s1">B</span><span class="s3">）某些司法管辖区不允许限制或排除偶然或间接损失的责任。因此，本节的一些限制可能不适用于您。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>释放</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">在适用法律允许的最大范围内，您将公司和其他公司缔约方从各种和性质的已知和未知的责任，索赔，要求和</span><span class="s1">/</span><span class="s3">或损害（实际和后果）中释放（包括但不限于，疏忽索赔），由用户之间的争议引起或与第三方的行为或不作为有关。</span>
+                </p>
+                <p class="p4">
+                    <span class="s2"><strong>分割性</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">如果本条款的任何子条款或条约被视为非法，无效或不可执行，则该子条款或条约将与本条款分开，不会影响到任何剩余的部分条款的有效性或可执行性、条款或规定，或任何其他条款，这些条款的条款或规定。</span>
+                </p>
+                <p class="p9">
+                    <span class="s3"><strong>杂项</strong></span>
+                </p>
+                <p class="p5">
+                    <span class="s3">这些条款构成您与我们之间关于您从我们购买</span><span class="s1">LVT</span><span class="s3">的完整协议。我们可能会不时修改这些条款，以符合适用法律或法规的要求。如果我们进行更改，我们将在</span><span class="s1">http://www.lives.one</span><span class="s3">上发布经修订的条款。修改后的条款将立即生效。我们可以根据这些条款分配我们的权利和义务。我们未能行使或执行本条款的任何权利或规定，将不作为放弃此类权利或规定的行为。如果延迟或失败导致超出我们合理控制的原因，我们将不承担任何延误或不履行本条款规定的义务的责任。从我们采购</span><span class="s1">LVT</span><span class="s3">不会形成任何形式的合作伙伴关系，合资企业或您与我们之间的任何其他类似关系。除本协议另有规定外，本条款仅供您和我方利益使用，不得将第三方受益人赋予任何其他人或实体。您同意并承认我们向您提供的所有协议，通知，披露和其他通信（包括本条款）将以电子形式提供。</span>
+                </p>
+                <p class="p2">
+                    <span class="s5"></span><br/>
+                </p>
+                <p class="p10">
+                    <span class="s5"></span><br/>
+                </p>
+                <p class="p6">
+                    <span class="s6"><strong>附录</strong></span><span class="s7"><strong>A</strong></span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>代币销售程序和规格</strong></span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>要创建和销售的</strong></span><span class="s1"><strong>LVT</strong></span><span class="s2"><strong>总数</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s1">LivesToken</span><span class="s3">（</span><span class="s1">LVT</span><span class="s3">）总共发行</span><span class="s1">10</span><span class="s3">亿币，私募总发行量为</span><span class="s1">1</span><span class="s3">亿币，占</span><span class="s1">10</span><span class="s3">％的</span><span class="s1">LivesToken</span><span class="s3">（</span><span class="s1">LVT</span><span class="s3">）总流通量。私人配售的最低门槛为</span><span class="s1">100 ETH</span><span class="s3">，不超过</span><span class="s1">500ETH</span><span class="s3">。持有的</span><span class="s1">LivesToken</span><span class="s3">将有一个</span><span class="s1">6</span><span class="s3">个月的锁定期，每个月的持有令牌的六分之一将被解锁。</span>
+                </p>
+                <p class="p3">
+                    <span class="s2"><strong>私募</strong></span><span class="s3">阶段只对特定投资者开放，价格为</span><span class="s1">1ETH = 9333 LVT</span><span class="s3">。</span>
+                </p>
+                <p class="p11">
+                    <span class="s3"><strong>购买与收取</strong></span><span class="s1"><strong>LVT</strong></span><span class="s3"><strong>的方法</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">为了在销售期间购买</span><span class="s1">LVT</span><span class="s3">，并且要获得您购买的</span><span class="s1">LVT</span><span class="s3">，您必须拥有支持</span><span class="s1">ERC20</span><span class="s3">令牌标准的</span><span class="s1">Ethereum</span><span class="s3">钱包。公司保留开具额外钱包要求的权利。</span>
+                </p>
+                <p class="p3">
+                    <span class="s3">在销售期开始之前，公司将通过</span><span class="s1">http://www.lives.one</span><span class="s3">发布</span><span class="s1">LVT</span><span class="s3">销售地址。要在销售期间开始购买</span><span class="s1">LVT</span><span class="s3">，您必须发送一定量的以太到</span><span class="s1">Ethereum</span><span class="s3">地址（</span><span class="s1">“LivesToken</span><span class="s3">地址</span><span class="s1">”</span><span class="s3">），只有在您同意这些条款之后，才会提供给您。在销售期间将以太</span><span class="s1">Ether</span><span class="s3">发送到</span><span class="s1">LivesToken</span><span class="s3">地址触发智能合同操作，根据该操作，智能合同系统将自动创建并及时将相应的</span><span class="s1">LVT</span><span class="s3">传递到从其发送以太网的</span><span class="s1">ERC20</span><span class="s3">钱包地址。</span>
+                </p>
+                <p class="p3">
+                    <span class="s3">以太币必须在销售期间发送到</span><span class="s1">LivesToken</span><span class="s3">地址，以便购买和接收</span><span class="s1">LVT</span><span class="s3">。将</span><span class="s1">Ether</span><span class="s3">发送到任何其他地址可能会导致</span><span class="s1">Ether</span><span class="s3">丢失。如果您的以太币在销售期间之前或之后的任何时间发送给</span><span class="s1">LivesToken</span><span class="s3">地址，则尝试购买</span><span class="s1">LVT</span><span class="s3">的交易将被拒绝。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>从</strong></span><span class="s1"><strong>LVT</strong></span><span class="s2"><strong>代币出售所得款项用途</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">公司在销售期间向买方收取的以太币，将用于补偿工程师，工作人员和承包商，支付运营成本和营销费用，法律合规费用，招募新团队成员以及解决其他行政和其他意外成本。</span>
+                </p>
+                <p class="p10">
+                    <span class="s5"></span><br/>
+                </p>
+                <p class="p10">
+                    <span class="s5"></span><br/>
+                </p>
+                <p class="p10">
+                    <span class="s5"></span><br/>
+                </p>
+                <p class="p6">
+                    <span class="s6"><strong>附录</strong></span><span class="s7"><strong>B</strong></span>
+                </p>
+                <p class="p11">
+                    <span class="s3"><strong>与购买，出售和使用</strong></span><span class="s1"><strong>LVT</strong></span><span class="s3"><strong>有关的某些风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s2"><strong>重要提示：</strong></span><span class="s3">如本条款其他条款所述，</span><span class="s1">LVT</span><span class="s3">未被作为证券或任何其他形式的投资产品进行投资或销售。因此，本附录</span><span class="s1">B</span><span class="s3">中提供的信息均不构成任何投资决策的依据，也不构成任何具体建议。公司明确表示不对因直接或间接产生的损害承担任何责任：（</span><span class="s1">i</span><span class="s3">）依赖本附录</span><span class="s1">B</span><span class="s3">所载的任何信息，（</span><span class="s1">ii</span><span class="s3">）任何此类错误，遗漏或不准确之处信息或（</span><span class="s1">iii</span><span class="s3">）由此类信息产生的任何行为。</span>
+                </p>
+                <p class="p12">
+                    <span class="s6"><strong>通过购买，持有和使用</strong></span><span class="s7"><strong>LVT</strong></span><span class="s8"><strong>，您明确承认并承担以下风险：</strong></span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>由于私钥丢失，监管错误或买方错误而导致</strong></span><span class="s1"><strong>LVT</strong></span><span class="s2"><strong>无法访问的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">需要私钥或私钥的组合来控制和处理存储在数字钱包或保险库中的</span><span class="s1">LVT</span><span class="s3">。因此，与您的数字钱包或存储</span><span class="s1">LVT</span><span class="s3">的存储库相关的必需私钥的丢失将导致此类</span><span class="s1">LVT</span><span class="s3">的丢失。</span><span class="s1"> </span><span class="s3">此外，任何获得此类私钥访问权限的第三方（包括通过获取使用数字钱包或保管库服务的登录凭据）可能会误导您的</span><span class="s1">LVT</span><span class="s3">。由您选择接收和存储</span><span class="s1">LVT</span><span class="s3">的数字钱包或保险柜引起的或以其他方式相关的任何错误或故障，包括您自己未能正确维护或使用此类数字钱包或保险柜，也可能导致您的</span><span class="s1">LVT</span><span class="s3">丢失。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>与以太坊协议有关的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">因为</span><span class="s1">LVT</span><span class="s3">和平台是基于</span><span class="s1">Ethereum</span><span class="s3">协议，任何故障，故障或遗弃的</span><span class="s1">Ethereum</span><span class="s3">协议可能会对平台或</span><span class="s1">LVT</span><span class="s3">产生重大的不利影响。此外，加密技术的发展或技术进步，如量子计算的发展，可能会给</span><span class="s1">LVT</span><span class="s3">和平台带来风险。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>采矿攻击的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">与基于</span><span class="s1">Ethereum</span><span class="s3">协议的其他分散加密代币一样，</span><span class="s1">LVT</span><span class="s3">在验证</span><span class="s1">Ethereum</span><span class="s3">块链中的</span><span class="s1">LVT</span><span class="s3">交易过程中容易受到矿工的攻击，包括但不限于双重攻击，多数采矿权攻击和自启动攻击都会对平台和</span><span class="s1">LVT</span><span class="s3">造成风险，包括但不限于准确执行和记录涉及</span><span class="s1">LVT</span><span class="s3">的交易。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>黑客攻击的风向和安全弱点</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">黑客或其他恶意团体或组织可能会尝试以各种方式干扰平台或</span><span class="s1">LVT</span><span class="s3">，包括但不限于恶意软件攻击，拒绝服务攻击，基于共识的攻击，</span><span class="s1">Sybil</span><span class="s3">攻击，</span><span class="s1">smurfing</span><span class="s3">和欺骗。</span><span class="s1"> </span><span class="s3">此外，由于平台基于开源软件，因此存在第三方或公司团队成员有意或无意地将困难引入平台核心基础设施的风险，这可能会对平台和</span><span class="s1">LVT</span><span class="s3">产生负面影响</span><span class="s1"> </span><span class="s3">，包括</span><span class="s1">LVT</span><span class="s3">获取服务的实用程序。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>与</strong></span><span class="s1"><strong>LVT</strong></span><span class="s2"><strong>市场相关的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s1">LVT</span><span class="s3">仅用于平台，公司不会支持或以其他方式促进</span><span class="s1">LVT</span><span class="s3">的二次交易或外部估值。这限制了使用</span><span class="s1">LVT</span><span class="s3">获得服务或访问平台的预期途径，因此可能会对您持有的</span><span class="s1">LVT</span><span class="s3">造成流动性风险。</span><span class="s1"> </span><span class="s3">即使第三方交易促成了</span><span class="s1">LVT</span><span class="s3">的二次交易，这种交易可能相对较新，也不受监管监督的限制，从而使其更易受市场风险的影响。此外，如果第三方确实将外部交换价值归因于</span><span class="s1">LVT</span><span class="s3">，则这种价值可能会非常不稳定，并且会降至零。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>无保险损失的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">与其他金融机构的银行账户或账户不同，</span><span class="s1">LVT</span><span class="s3">不保险，除非您特别获得私人保险来保险。</span><span class="s1"> </span><span class="s3">因此，在效用价值损失或损失的情况下，我们没有安排公共保险公司或私人保险来提供该项服务。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>风险与不确定的规定和执法行动有关</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">在许多司法管辖区，</span><span class="s1">LVT</span><span class="s3">和分布式分类帐技术的监管不清楚或不明确。很难预测管理机构如何或是否可以对这种技术及其应用采用现行法规。同样难以预测立法机构或监管机构如何实施法律和法规的变更，影响分布式分类帐技术及其应用，包括平台和</span><span class="s1">LVT</span><span class="s3">。监管行动可能会以各种方式对平台和</span><span class="s1">LVT</span><span class="s3">产生负面影响，其中包括为了说明目的，通过确定</span><span class="s1">LVT</span><span class="s3">是需要注册或许可的受管制的金融工具。如果监管行为或法律或法规的变更使其在该管辖区内经营是非法的，或者在商业上不合法获得在该管辖区内经营的必要监管许可，公司可能会停止在某个管辖区的业务。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>税收风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s1">LVT</span><span class="s3">的税务特征是不确定的。您必须寻求与采纳</span><span class="s1">LVT</span><span class="s3">有关的税务建议，这可能会对您造成不利的税收影响，包括预扣税，所得税和税务报告要求。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>替代平台的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">可能会有相同的开源代码和协议的替代平台，并尝试促进与服务实质相似的服务。平台可能与这些替代平台竞争，这可能会对平台和</span><span class="s1">LVT</span><span class="s3">产生负面影响，包括</span><span class="s1">LVT</span><span class="s3">获取服务的效用。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>对平台或分布式应用程序兴趣不足的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">平台可能不会被大量的个人，公司和其他实体使用，或者更广泛地在创建和开发分布式平台（如平台）方面的公众利益有限。</span><span class="s1"> </span><span class="s3">这种缺乏使用或兴趣可能会对平台的发展和</span><span class="s1">LVT</span><span class="s3">的潜在效用（包括其获取服务的效用）产生负面影响。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>以太和其他货币价值波动不利的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">公司团队打算利用销售</span><span class="s1">LVT</span><span class="s3">的收益资助</span><span class="s1">“</span><span class="s3">平台</span><span class="s1">”</span><span class="s3">的维护和开发。出售</span><span class="s1">LVT</span><span class="s3">的收益将以</span><span class="s1">Ether</span><span class="s3">来计价，并可酌情转换为其他加密和法定货币。如果以太或其他货币的价值在销售期间或之后不利地波动，公司团队可能无法为开发提供资金，也可能无法按照预期的方式开发或维护该平台。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>缺乏治理权的风险</strong></span>
+                </p>
+                <p class="p3">
+                    <span class="s3">由于</span><span class="s1">LVT</span><span class="s3">对平台或公司不承担任何形式的治理权，涉及平台或公司的所有决策将由公司自行决定，包括但不限于终止平台的决定，出售更多的</span><span class="s1">LVT</span><span class="s3">使用平台，或出售或清算公司。或出售或清算本公司。这些决定可能会对您所持有的平台和</span><span class="s1">LVT</span><span class="s3">的效用产生不利影响，包括</span><span class="s1">LVT</span><span class="s3">用于获取服务的效用。</span>
+                </p>
+                <p class="p6">
+                    <span class="s2"><strong>意料之外的风险</strong></span>
+                </p>
+                <p class="p5">
+                    <span class="s3">诸如</span><span class="s1">LVT</span><span class="s3">的加密令牌是一种新的和未经测试的技术。</span><span class="s1"> </span><span class="s3">除了本附录</span><span class="s1">B</span><span class="s3">所包含的风险外，还有与您购买，持有和使用</span><span class="s1">LVT</span><span class="s3">有关的其他风险，包括本公司无法预期的风险。这种风险可能会进一步实现为本附录</span><span class="s1">B</span><span class="s3">中讨论的意外变化或风险组合。</span>
+                </p>
+                <p>
+                    <br/>
+                </p>
+            </div>
+            </if>
+        </div>
+    </div>
+<include file="Yure/footer"/>

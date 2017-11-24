@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{$Think.lang.index_title}</title>
+    <link type="image/x-icon" href="__STATIC__/favicon.ico" rel="shortcut icon">
+    <!-- build:css css/page_index.css -->
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/pintuer.css" />
+    <link rel="stylesheet" href="__STATIC__/assets/cssmin/my.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="container">
+        <div class="line clearfix gs-line">
+            <div class="float-left">
+                <img src="__STATIC__/assets/images/logo.png" class="img-responsive logo" alt="">
+            </div>
+            <if condition="$lang eq 'en-us'">
+                <div class="float-right"><a href="?l=zh-cn"><b>中文</b></a></div>
+            <else/>
+                <div class="float-right"><a href="?l=en-us"><b>English</b></a></div>
+            </if>
+        </div>
+        <div class="line text-center">
+            <img src="__STATIC__/assets/images/livestoken.png" class="img-responsive livestoken" alt="">
+        </div>
+        <div class="line gs-content">
+
+
+
+            <h2 class="gs-title text-center">{$Think.lang.index_text_1}</h2>
+            <p class="gs-p">{$Think.lang.index_text_2}</p>
+            <a href="/yure/rglog.html" class="button bg-main radius-none button-block text-center btn">{$Think.lang.index_text_5}</a>
+            <p class="text-center gs-zs">{$Think.lang.index_text_3}</p>
+        </div>
+        <div class="text-center footer">
+            {$Think.lang.index_text_4}
+        </div>
+    </div>
+<include file="Yure/footer"/>
